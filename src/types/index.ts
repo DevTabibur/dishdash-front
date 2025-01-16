@@ -40,3 +40,13 @@ export type {
   CategoryCardProps,
   CategoryMainProps,
 } from "./categoryMain";
+export type {
+  FlashSaleItem,
+  FlashSaleCardProps,
+  FlashSalesProps,
+  CountdownProps,
+} from "./flashSales";
+export type {
+  FlashDealProduct,
+  FlashDealProductCardProps,
+} from "./flashDealCard";

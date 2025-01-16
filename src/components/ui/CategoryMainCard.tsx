@@ -21,7 +21,7 @@ const CategoryMainCard = ({ item }: CategoryCardProps) => {
       <div className="absolute right-0 bottom-0 w-1/2 h-full">
         <div className="relative w-full h-full">
           <Image
-            src={item.image || "/placeholder.svg"}
+            src={item.image}
             alt={item.title}
             fill
             className="object-contain object-right-bottom"

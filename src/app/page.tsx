@@ -1,4 +1,5 @@
-import { CategoryMain, CategorySection, Hero } from "@/components";
+import { CategoryMain, CategorySection, FlashSales, Hero } from "@/components";
+import FlashDeal from "@/components/FlashDeal";
 
 import { HeaderTop } from "@/components/layout";
 import { HeaderMain } from "@/components/layout";
@@ -13,6 +14,8 @@ export default function Home() {
       <Hero />
       <CategorySection />
       <CategoryMain />
+      <FlashSales />
+      <FlashDeal />
     </main>
   );
 }
