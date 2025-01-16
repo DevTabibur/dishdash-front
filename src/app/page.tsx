@@ -1,5 +1,6 @@
 import { CategoryMain, CategorySection, FlashSales, Hero } from "@/components";
 import FlashDeal from "@/components/FlashDeal";
+import FlashOffers from "@/components/FlashOffers";
 
 import { HeaderTop } from "@/components/layout";
 import { HeaderMain } from "@/components/layout";
@@ -16,6 +17,7 @@ export default function Home() {
       <CategoryMain />
       <FlashSales />
       <FlashDeal />
+      <FlashOffers />
     </main>
   );
 }

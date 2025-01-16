@@ -9,3 +9,4 @@ export { default as CategoryCard } from "./CategoryCard";
 export { default as Countdown } from "./CountDown";
 export { default as FlashSaleCard } from "./FlashSaleCard";
 export { default as FlashDealCard } from "./FlashDealCard";
+export { default as FlashOfferCard } from "./FlashOfferCard";
