@@ -56,3 +56,4 @@ export type {
   RecommendedProductsProps,
   RecommendedCategory,
 } from "./recommendedProduct";
+export type { HotDeal, HotDealProduct, CountdownTime } from "./hotDeals";

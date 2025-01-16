@@ -11,3 +11,4 @@ export { default as FlashSaleCard } from "./FlashSaleCard";
 export { default as FlashDealCard } from "./FlashDealCard";
 export { default as FlashOfferCard } from "./FlashOfferCard";
 export { default as RecommendedProductCard } from "./RecommendedProductCard";
+export { default as HotDealsCard } from "./HotDealsCard";

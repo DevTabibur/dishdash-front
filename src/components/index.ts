@@ -6,3 +6,4 @@ export { default as CategorySection } from "./CategorySection";
 export { default as CategoryMain } from "./CategoryMain";
 export { default as FlashSales } from "./FlashSales";
 export { default as RecommendedProducts } from "./RecommendedProducts";
+export { default as HotDealsSection } from "./HotDealSection";

@@ -4,6 +4,7 @@ import {
   FlashSales,
   Hero,
   RecommendedProducts,
+  HotDealsSection,
 } from "@/components";
 import FlashDeal from "@/components/FlashDeal";
 import FlashOffers from "@/components/FlashOffers";
@@ -11,6 +12,7 @@ import FlashOffers from "@/components/FlashOffers";
 import { HeaderTop } from "@/components/layout";
 import { HeaderMain } from "@/components/layout";
 import { HeaderMiddle } from "@/components/layout";
+import HotDealsImage from "../../public/images/hot-deals/hot-deals-img.png";
 const sampleProducts = [
   {
     id: "1",
@@ -122,6 +124,31 @@ const sampleProducts = [
   },
   // Add more products as needed
 ];
+
+const featuredDeal = {
+  id: "1",
+  title: "Fresh Vegetables",
+  image: HotDealsImage.src,
+  endDate: "2024-02-01T00:00:00",
+  href: "/deals/fresh-vegetables",
+  backgroundColor: "linear-gradient(135deg, #27AE60 0%, #1F8B4D 100%)",
+};
+
+const products = [
+  {
+    id: "1",
+    title: "Whole Grains and Seeds Organic Bread",
+    image: "/placeholder.svg",
+    currentPrice: 14.99,
+    originalPrice: 28.99,
+    rating: { value: 4.8, count: 17000 },
+    seller: { name: "Lucky Supermarket", id: "lucky-1" },
+    badge: "Best Sale",
+    href: "/product/organic-bread",
+  },
+  // Add more products...
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
@@ -135,6 +162,7 @@ export default function Home() {
       <FlashDeal />
       <FlashOffers />
       <RecommendedProducts products={sampleProducts} />
+      <HotDealsSection featuredDeal={featuredDeal} products={sampleProducts} />
     </main>
   );
 }
