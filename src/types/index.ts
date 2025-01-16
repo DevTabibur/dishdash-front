@@ -50,3 +50,9 @@ export type {
   FlashDealProduct,
   FlashDealProductCardProps,
 } from "./flashDealCard";
+export type {
+  RecommendedProduct,
+  RecommendedProductCardProps,
+  RecommendedProductsProps,
+  RecommendedCategory,
+} from "./recommendedProduct";
