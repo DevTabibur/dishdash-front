@@ -17,3 +17,4 @@ export { default as ShippingSection } from "./ShippingSection";
 export { default as Newsletter } from "./Newsletter";
 export { default as Footer } from "./Footer";
 export { default as FooterBottom } from "./FooterBottom";
+export { default as Breadcrumb } from "./Breadcrumb";

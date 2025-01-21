@@ -373,66 +373,6 @@ const featuredProducts = [
   },
 ];
 
-// const products = [
-//   {
-//     id: "1",
-//     title: "Taylor Farms Broccoli Florets Vegetables 1",
-//     image:
-//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8tPdsKymkVKIKlVGGU7yspjpTOcjrH.png",
-//     rating: {
-//       value: 4.8,
-//       count: 17000,
-//     },
-//     price: {
-//       current: 1500.0,
-//       original: 1500.0,
-//     },
-//   },
-//   {
-//     id: "2",
-//     title: "Taylor Farms Broccoli Florets Vegetables 2",
-//     image:
-//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8tPdsKymkVKIKlVGGU7yspjpTOcjrH.png",
-//     rating: {
-//       value: 4.8,
-//       count: 17000,
-//     },
-//     price: {
-//       current: 1500.0,
-//       original: 1500.0,
-//     },
-//   },
-//   {
-//     id: "3",
-//     title: "Taylor Farms Broccoli Florets Vegetables 3",
-//     image:
-//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8tPdsKymkVKIKlVGGU7yspjpTOcjrH.png",
-//     rating: {
-//       value: 4.8,
-//       count: 17000,
-//     },
-//     price: {
-//       current: 1500.0,
-//       original: 1500.0,
-//     },
-//   },
-//   {
-//     id: "4",
-//     title: "Taylor Farms Broccoli Florets Vegetables 4",
-//     image:
-//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8tPdsKymkVKIKlVGGU7yspjpTOcjrH.png",
-//     rating: {
-//       value: 4.8,
-//       count: 17000,
-//     },
-//     price: {
-//       current: 1500.0,
-//       original: 1500.0,
-//     },
-//   },
-//   // Add more products with different images
-// ];
-
 const brands = [
   {
     id: "1",
@@ -464,29 +404,8 @@ const brands = [
   },
 ];
 
-// const products = [
-//   {
-//     id: "1",
-//     title: "C-500 Antioxidant Protect Dietary Supplement",
-//     image:
-//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
-//     rating: {
-//       value: 4.8,
-//       count: 17000,
-//     },
-//     seller: {
-//       name: "Lucky Supermarket",
-//       id: "lucky-1",
-//     },
-//     price: {
-//       current: 14.99,
-//       original: 28.99,
-//     },
-//   },
-
-// ];
-
 import BodyBottomBgImage from "../../public/images/body-bottom-bg.png";
+import Breadcrumb from "@/components/Breadcrumb";
 export default function Home() {
   const handleSubscribe = async (email: string) => {
     // Implement your newsletter subscription logic here
