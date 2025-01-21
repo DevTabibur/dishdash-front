@@ -6,6 +6,7 @@ import {
   RecommendedProducts,
   HotDealsSection,
   VendorSection,
+  DeliveryBanner,
 } from "@/components";
 import FlashDeal from "@/components/FlashDeal";
 import FlashOffers from "@/components/FlashOffers";
@@ -202,7 +203,7 @@ const vendors = [
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
-      <HeaderTop />
+      {/* <HeaderTop />
       <HeaderMiddle location="New York" />
       <HeaderMain />
       <Hero />
@@ -213,7 +214,8 @@ export default function Home() {
       <FlashOffers />
       <RecommendedProducts products={sampleProducts} />
       <HotDealsSection featuredDeal={featuredDeal} products={sampleProducts} />
-      <VendorSection vendors={vendors} />
+      <VendorSection vendors={vendors} /> */}
+      <DeliveryBanner />
     </main>
   );
 }
