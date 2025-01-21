@@ -17,3 +17,4 @@ export { default as VendorCurvedShape } from "./VendorCurvedShape";
 export { default as CircularLogo } from "./CircularLogo";
 export { default as OrganicProductCard } from "./OrganicProductCard";
 export { default as ProductSectionCard } from "./ProductSectionCard";
+export { default as BrandLogo } from "./BrandLogo";

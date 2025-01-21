@@ -9,6 +9,7 @@ import {
   DeliveryBanner,
   OrganicFood,
   ProductSections,
+  BrandCarousel,
 } from "@/components";
 import FlashDeal from "@/components/FlashDeal";
 import FlashOffers from "@/components/FlashOffers";
@@ -419,6 +420,37 @@ const products = [
   // Add more products with different images
 ];
 
+const brands = [
+  {
+    id: "1",
+    name: "Organic Food 1",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
+    href: "/brands/organic-food",
+  },
+  {
+    id: "2",
+    name: "Organic Food 2",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
+    href: "/brands/organic-food",
+  },
+  {
+    id: "3",
+    name: "Organic Food3",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
+    href: "/brands/organic-food",
+  },
+  {
+    id: "4",
+    name: "Organic Food 4",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
+    href: "/brands/organic-food",
+  },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
@@ -437,14 +469,22 @@ export default function Home() {
       {/* <DeliveryBanner />
       <OrganicFood products={products} /> */}
 
-      <main className="container mx-auto px-4 py-12">
+      {/* <main className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <ProductSections title="Featured Products" products={products} />
           <ProductSections title="Top Selling Products" products={products} />
           <ProductSections title="On-sale Products" products={products} />
           <ProductSections title="Top Rated Products" products={products} />
         </div>
-      </main>
+      </main> */}
+      <BrandCarousel
+        brands={brands}
+        itemsToShow={{
+          mobile: 3,
+          tablet: 5,
+          desktop: 8,
+        }}
+      />
     </main>
   );
 }

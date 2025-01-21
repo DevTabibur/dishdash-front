@@ -65,3 +65,4 @@ export type {
 } from "./vendor";
 export type { OrganicFoodProps } from "./organicFood";
 export type { ProductSectionProps } from "./productSection";
+export type { Brand, BrandCarouselProps, BrandLogoProps } from "./brands";
