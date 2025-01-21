@@ -67,3 +67,8 @@ export type { OrganicFoodProps } from "./organicFood";
 export type { ProductSectionProps } from "./productSection";
 export type { Brand, BrandCarouselProps, BrandLogoProps } from "./brands";
 export type { Product, ProductCardProps, NewArrivalsProps } from "./newArrival";
+export type {
+  ShippingFeature,
+  ShippingFeaturesProps,
+  ShippingCardProps,
+} from "./shipping";

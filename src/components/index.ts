@@ -13,3 +13,4 @@ export { default as VendorCard } from "./ui/VendorCard";
 export { default as OrganicFood } from "./OrganicFood";
 export { default as ProductSections } from "./ProductSections";
 export { default as BrandCarousel } from "./BrandCarousel";
+export { default as ShippingSection } from "./ShippingSection";

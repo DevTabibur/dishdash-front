@@ -10,6 +10,7 @@ import {
   OrganicFood,
   ProductSections,
   BrandCarousel,
+  ShippingSection,
 } from "@/components";
 import FlashDeal from "@/components/FlashDeal";
 import FlashOffers from "@/components/FlashOffers";
@@ -452,152 +453,27 @@ const vendors = [
 //   },
 // ];
 
-const products = [
-  {
-    id: "1",
-    title: "C-500 Antioxidant Protect Dietary Supplement",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
-    rating: {
-      value: 4.8,
-      count: 17000,
-    },
-    seller: {
-      name: "Lucky Supermarket",
-      id: "lucky-1",
-    },
-    price: {
-      current: 14.99,
-      original: 28.99,
-    },
-  },
-  {
-    id: "1",
-    title: "C-500 Antioxidant Protect Dietary Supplement",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
-    rating: {
-      value: 4.8,
-      count: 17000,
-    },
-    seller: {
-      name: "Lucky Supermarket",
-      id: "lucky-1",
-    },
-    price: {
-      current: 14.99,
-      original: 28.99,
-    },
-  },
-  {
-    id: "1",
-    title: "C-500 Antioxidant Protect Dietary Supplement",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
-    rating: {
-      value: 4.8,
-      count: 17000,
-    },
-    seller: {
-      name: "Lucky Supermarket",
-      id: "lucky-1",
-    },
-    price: {
-      current: 14.99,
-      original: 28.99,
-    },
-  },
-  {
-    id: "1",
-    title: "C-500 Antioxidant Protect Dietary Supplement",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
-    rating: {
-      value: 4.8,
-      count: 17000,
-    },
-    seller: {
-      name: "Lucky Supermarket",
-      id: "lucky-1",
-    },
-    price: {
-      current: 14.99,
-      original: 28.99,
-    },
-  },
-  {
-    id: "1",
-    title: "C-500 Antioxidant Protect Dietary Supplement",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
-    rating: {
-      value: 4.8,
-      count: 17000,
-    },
-    seller: {
-      name: "Lucky Supermarket",
-      id: "lucky-1",
-    },
-    price: {
-      current: 14.99,
-      original: 28.99,
-    },
-  },
-  {
-    id: "1",
-    title: "C-500 Antioxidant Protect Dietary Supplement",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
-    rating: {
-      value: 4.8,
-      count: 17000,
-    },
-    seller: {
-      name: "Lucky Supermarket",
-      id: "lucky-1",
-    },
-    price: {
-      current: 14.99,
-      original: 28.99,
-    },
-  },
-  {
-    id: "1",
-    title: "C-500 Antioxidant Protect Dietary Supplement",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
-    rating: {
-      value: 4.8,
-      count: 17000,
-    },
-    seller: {
-      name: "Lucky Supermarket",
-      id: "lucky-1",
-    },
-    price: {
-      current: 14.99,
-      original: 28.99,
-    },
-  },
-  {
-    id: "1",
-    title: "C-500 Antioxidant Protect Dietary Supplement",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
-    rating: {
-      value: 4.8,
-      count: 17000,
-    },
-    seller: {
-      name: "Lucky Supermarket",
-      id: "lucky-1",
-    },
-    price: {
-      current: 14.99,
-      original: 28.99,
-    },
-  },
-];
+// const products = [
+//   {
+//     id: "1",
+//     title: "C-500 Antioxidant Protect Dietary Supplement",
+//     image:
+//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
+//     rating: {
+//       value: 4.8,
+//       count: 17000,
+//     },
+//     seller: {
+//       name: "Lucky Supermarket",
+//       id: "lucky-1",
+//     },
+//     price: {
+//       current: 14.99,
+//       original: 28.99,
+//     },
+//   },
+
+// ];
 
 export default function Home() {
   return (
@@ -633,7 +509,7 @@ export default function Home() {
           desktop: 8,
         }}
       /> */}
-      <main>
+      {/* <main>
         <NewArrivalSections
           products={products}
           itemsToShow={{
@@ -642,7 +518,8 @@ export default function Home() {
             desktop: 5,
           }}
         />
-      </main>
+      </main> */}
+      <ShippingSection />
     </main>
   );
 }
