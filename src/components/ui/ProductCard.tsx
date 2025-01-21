@@ -1,24 +1,24 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Image from 'next/image'
-import { FiMinus, FiPlus, FiStar } from 'react-icons/fi'
-import type { Product } from '@/types/product'
+import { useState } from "react";
+import Image from "next/image";
+import { FiMinus, FiPlus, FiStar } from "react-icons/fi";
+import type { Product } from "@/types/organicFood";
 
 interface ProductCardProps {
-  product: Product
-  onAddToCart: (productId: string, quantity: number) => void
+  product: Product;
+  onAddToCart: (productId: string, quantity: number) => void;
 }
 
 const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
-  const [quantity, setQuantity] = useState(0)
+  const [quantity, setQuantity] = useState(0);
 
   const handleQuantityChange = (increment: boolean) => {
-    setQuantity(prev => {
-      const newQuantity = increment ? prev + 1 : prev - 1
-      return Math.max(0, newQuantity) // Prevent negative quantities
-    })
-  }
+    setQuantity((prev) => {
+      const newQuantity = increment ? prev + 1 : prev - 1;
+      return Math.max(0, newQuantity); // Prevent negative quantities
+    });
+  };
 
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-100">
@@ -30,20 +30,20 @@ const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
           className="object-cover rounded-t-lg"
         />
       </div>
-      
+
       <div className="p-4">
         <div className="flex justify-between items-start mb-2">
           <h3 className="font-medium text-gray-900">{product.name}</h3>
           <span className="text-[#FF6B98]">$ {product.price.toFixed(1)}</span>
         </div>
-        
+
         <div className="flex items-center gap-1 mb-4">
           <FiStar className="w-4 h-4 fill-yellow-400 text-yellow-400" />
           <span className="text-sm text-gray-600">
             {product.rating} ({product.reviews})
           </span>
         </div>
-        
+
         <div className="flex items-center justify-between">
           <button
             onClick={() => onAddToCart(product.id, quantity)}
@@ -51,7 +51,7 @@ const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
           >
             Buy Now
           </button>
-          
+
           <div className="flex items-center gap-3">
             <button
               onClick={() => handleQuantityChange(false)}
@@ -70,8 +70,7 @@ const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductCard
-
+export default ProductCard;

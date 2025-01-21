@@ -63,3 +63,5 @@ export type {
   VendorCardProps,
   VendorSectionProps,
 } from "./vendor";
+export type { OrganicFoodProps } from "./organicFood";
+export type { ProductSectionProps } from "./productSection";

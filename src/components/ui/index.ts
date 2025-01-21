@@ -15,3 +15,5 @@ export { default as HotDealsCard } from "./HotDealsCard";
 export { default as VendorCard } from "./VendorCard";
 export { default as VendorCurvedShape } from "./VendorCurvedShape";
 export { default as CircularLogo } from "./CircularLogo";
+export { default as OrganicProductCard } from "./OrganicProductCard";
+export { default as ProductSectionCard } from "./ProductSectionCard";
