@@ -19,6 +19,7 @@ import { HeaderMain } from "@/components/layout";
 import { HeaderMiddle } from "@/components/layout";
 import HotDealsImage from "../../public/images/hot-deals/hot-deals-img.png";
 import { VendorCard } from "@/components/ui";
+import NewArrivalSections from "@/components/NewArrivalSections";
 
 const sampleProducts = [
   {
@@ -343,111 +344,258 @@ const vendors = [
 //   },
 // ]
 
-const featuredProducts = [
-  {
-    id: "1",
-    title: "Taylor Farms Broccoli Florets Vegetables",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Nj9SycrjrPY3v5NvgRZHx5YU9fHrkv.png",
-    rating: {
-      value: 4.8,
-      count: 17000,
-    },
-    price: {
-      current: 1500.0,
-      original: 1500.0,
-    },
-  },
-];
+// const featuredProducts = [
+//   {
+//     id: "1",
+//     title: "Taylor Farms Broccoli Florets Vegetables",
+//     image:
+//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Nj9SycrjrPY3v5NvgRZHx5YU9fHrkv.png",
+//     rating: {
+//       value: 4.8,
+//       count: 17000,
+//     },
+//     price: {
+//       current: 1500.0,
+//       original: 1500.0,
+//     },
+//   },
+// ];
+
+// const products = [
+//   {
+//     id: "1",
+//     title: "Taylor Farms Broccoli Florets Vegetables 1",
+//     image:
+//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8tPdsKymkVKIKlVGGU7yspjpTOcjrH.png",
+//     rating: {
+//       value: 4.8,
+//       count: 17000,
+//     },
+//     price: {
+//       current: 1500.0,
+//       original: 1500.0,
+//     },
+//   },
+//   {
+//     id: "2",
+//     title: "Taylor Farms Broccoli Florets Vegetables 2",
+//     image:
+//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8tPdsKymkVKIKlVGGU7yspjpTOcjrH.png",
+//     rating: {
+//       value: 4.8,
+//       count: 17000,
+//     },
+//     price: {
+//       current: 1500.0,
+//       original: 1500.0,
+//     },
+//   },
+//   {
+//     id: "3",
+//     title: "Taylor Farms Broccoli Florets Vegetables 3",
+//     image:
+//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8tPdsKymkVKIKlVGGU7yspjpTOcjrH.png",
+//     rating: {
+//       value: 4.8,
+//       count: 17000,
+//     },
+//     price: {
+//       current: 1500.0,
+//       original: 1500.0,
+//     },
+//   },
+//   {
+//     id: "4",
+//     title: "Taylor Farms Broccoli Florets Vegetables 4",
+//     image:
+//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8tPdsKymkVKIKlVGGU7yspjpTOcjrH.png",
+//     rating: {
+//       value: 4.8,
+//       count: 17000,
+//     },
+//     price: {
+//       current: 1500.0,
+//       original: 1500.0,
+//     },
+//   },
+//   // Add more products with different images
+// ];
+
+// const brands = [
+//   {
+//     id: "1",
+//     name: "Organic Food 1",
+//     image:
+//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
+//     href: "/brands/organic-food",
+//   },
+//   {
+//     id: "2",
+//     name: "Organic Food 2",
+//     image:
+//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
+//     href: "/brands/organic-food",
+//   },
+//   {
+//     id: "3",
+//     name: "Organic Food3",
+//     image:
+//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
+//     href: "/brands/organic-food",
+//   },
+//   {
+//     id: "4",
+//     name: "Organic Food 4",
+//     image:
+//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
+//     href: "/brands/organic-food",
+//   },
+// ];
 
 const products = [
   {
     id: "1",
-    title: "Taylor Farms Broccoli Florets Vegetables 1",
+    title: "C-500 Antioxidant Protect Dietary Supplement",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8tPdsKymkVKIKlVGGU7yspjpTOcjrH.png",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
     rating: {
       value: 4.8,
       count: 17000,
     },
-    price: {
-      current: 1500.0,
-      original: 1500.0,
-    },
-  },
-  {
-    id: "2",
-    title: "Taylor Farms Broccoli Florets Vegetables 2",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8tPdsKymkVKIKlVGGU7yspjpTOcjrH.png",
-    rating: {
-      value: 4.8,
-      count: 17000,
+    seller: {
+      name: "Lucky Supermarket",
+      id: "lucky-1",
     },
     price: {
-      current: 1500.0,
-      original: 1500.0,
+      current: 14.99,
+      original: 28.99,
     },
   },
-  {
-    id: "3",
-    title: "Taylor Farms Broccoli Florets Vegetables 3",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8tPdsKymkVKIKlVGGU7yspjpTOcjrH.png",
-    rating: {
-      value: 4.8,
-      count: 17000,
-    },
-    price: {
-      current: 1500.0,
-      original: 1500.0,
-    },
-  },
-  {
-    id: "4",
-    title: "Taylor Farms Broccoli Florets Vegetables 4",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8tPdsKymkVKIKlVGGU7yspjpTOcjrH.png",
-    rating: {
-      value: 4.8,
-      count: 17000,
-    },
-    price: {
-      current: 1500.0,
-      original: 1500.0,
-    },
-  },
-  // Add more products with different images
-];
-
-const brands = [
   {
     id: "1",
-    name: "Organic Food 1",
+    title: "C-500 Antioxidant Protect Dietary Supplement",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
-    href: "/brands/organic-food",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
+    rating: {
+      value: 4.8,
+      count: 17000,
+    },
+    seller: {
+      name: "Lucky Supermarket",
+      id: "lucky-1",
+    },
+    price: {
+      current: 14.99,
+      original: 28.99,
+    },
   },
   {
-    id: "2",
-    name: "Organic Food 2",
+    id: "1",
+    title: "C-500 Antioxidant Protect Dietary Supplement",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
-    href: "/brands/organic-food",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
+    rating: {
+      value: 4.8,
+      count: 17000,
+    },
+    seller: {
+      name: "Lucky Supermarket",
+      id: "lucky-1",
+    },
+    price: {
+      current: 14.99,
+      original: 28.99,
+    },
   },
   {
-    id: "3",
-    name: "Organic Food3",
+    id: "1",
+    title: "C-500 Antioxidant Protect Dietary Supplement",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
-    href: "/brands/organic-food",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
+    rating: {
+      value: 4.8,
+      count: 17000,
+    },
+    seller: {
+      name: "Lucky Supermarket",
+      id: "lucky-1",
+    },
+    price: {
+      current: 14.99,
+      original: 28.99,
+    },
   },
   {
-    id: "4",
-    name: "Organic Food 4",
+    id: "1",
+    title: "C-500 Antioxidant Protect Dietary Supplement",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
-    href: "/brands/organic-food",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
+    rating: {
+      value: 4.8,
+      count: 17000,
+    },
+    seller: {
+      name: "Lucky Supermarket",
+      id: "lucky-1",
+    },
+    price: {
+      current: 14.99,
+      original: 28.99,
+    },
+  },
+  {
+    id: "1",
+    title: "C-500 Antioxidant Protect Dietary Supplement",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
+    rating: {
+      value: 4.8,
+      count: 17000,
+    },
+    seller: {
+      name: "Lucky Supermarket",
+      id: "lucky-1",
+    },
+    price: {
+      current: 14.99,
+      original: 28.99,
+    },
+  },
+  {
+    id: "1",
+    title: "C-500 Antioxidant Protect Dietary Supplement",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
+    rating: {
+      value: 4.8,
+      count: 17000,
+    },
+    seller: {
+      name: "Lucky Supermarket",
+      id: "lucky-1",
+    },
+    price: {
+      current: 14.99,
+      original: 28.99,
+    },
+  },
+  {
+    id: "1",
+    title: "C-500 Antioxidant Protect Dietary Supplement",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jjvAhqrd1jIMzCEumjiRtl8KfYNqpo.png",
+    rating: {
+      value: 4.8,
+      count: 17000,
+    },
+    seller: {
+      name: "Lucky Supermarket",
+      id: "lucky-1",
+    },
+    price: {
+      current: 14.99,
+      original: 28.99,
+    },
   },
 ];
 
@@ -477,14 +625,24 @@ export default function Home() {
           <ProductSections title="Top Rated Products" products={products} />
         </div>
       </main> */}
-      <BrandCarousel
+      {/* <BrandCarousel
         brands={brands}
         itemsToShow={{
           mobile: 3,
           tablet: 5,
           desktop: 8,
         }}
-      />
+      /> */}
+      <main>
+        <NewArrivalSections
+          products={products}
+          itemsToShow={{
+            mobile: 1,
+            tablet: 3,
+            desktop: 5,
+          }}
+        />
+      </main>
     </main>
   );
 }
