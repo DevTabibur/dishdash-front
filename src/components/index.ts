@@ -18,3 +18,4 @@ export { default as Newsletter } from "./Newsletter";
 export { default as Footer } from "./Footer";
 export { default as FooterBottom } from "./FooterBottom";
 export { default as Breadcrumb } from "./Breadcrumb";
+export { default as Cart } from "./Cart";

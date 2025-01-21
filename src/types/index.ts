@@ -75,4 +75,11 @@ export type {
   ShippingCardProps,
 } from "./shipping";
 export type { NewsletterFormProps, NewsletterProps } from "./newsletter";
-export type { BreadcrumbProps, BreadcrumbItem } from "./breadCrumb";
+export type { BreadcrumbProps, BreadcrumbItem } from "./breadcrumb";
+export type {
+  CartItem,
+  CartTotals,
+  CartItemProps,
+  CartTotalsProps,
+  CartProps,
+} from "./cart";

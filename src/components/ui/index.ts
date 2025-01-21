@@ -20,4 +20,4 @@ export { default as ProductSectionCard } from "./ProductSectionCard";
 export { default as BrandLogo } from "./BrandLogo";
 export { default as NewArrivalCard } from "./NewArrivalCard";
 export { default as ShippingCard } from "./ShippingCard";
-export { default as NewsletterForm } from "./NewsLetterForm";
+export { default as NewsletterForm } from "./NewsletterForm";
