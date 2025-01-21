@@ -21,3 +21,6 @@ export { default as BrandLogo } from "./BrandLogo";
 export { default as NewArrivalCard } from "./NewArrivalCard";
 export { default as ShippingCard } from "./ShippingCard";
 export { default as NewsletterForm } from "./NewsletterForm";
+export { default as StepIndicator } from "./StepIndicator";
+export { default as CheckoutForm } from "./CheckoutForm";
+export { default as CartReview } from "./CartReview";

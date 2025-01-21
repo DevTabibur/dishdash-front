@@ -77,9 +77,18 @@ export type {
 export type { NewsletterFormProps, NewsletterProps } from "./newsletter";
 export type { BreadcrumbProps, BreadcrumbItem } from "./breadcrumb";
 export type {
-  CartItem,
+  // CartItem,
   CartTotals,
   CartItemProps,
   CartTotalsProps,
   CartProps,
 } from "./cart";
+export type {
+  CheckoutStep,
+  CartItem,
+  ShippingInfo,
+  OrderSummary,
+  CheckoutFormProps,
+  CartReviewProps,
+  StepIndicatorProps,
+} from "./checkout";
