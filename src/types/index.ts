@@ -1,6 +1,6 @@
 export type { BlogPost } from "./blog";
 export type { CaseStudy } from "./caseStudy";
-export type { ContactFormValues, SocialLink } from "./contact";
+export type { ContactFormValues } from "./contact";
 export type {
   User,
   DashboardMenuItem,
@@ -11,7 +11,14 @@ export type {
 } from "./dashboard";
 export type { FAQItem } from "./faq";
 export type { Feature } from "./feature";
-export type { FooterLink, ContactInfo } from "./footer";
+export type {
+  FooterLink,
+  ContactInfo,
+  FooterProps,
+  FooterColumn,
+  SocialLink,
+} from "./footer";
+export type { FooterBottomProps } from "./footerBottom";
 export type { SubMenuItem, MenuItem, NavigationItem } from "./navigation";
 // export type { Product, ProductCategory } from './product'
 export type { Profile } from "./profile";

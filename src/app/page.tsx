@@ -13,6 +13,7 @@ import {
   BrandCarousel,
   ShippingSection,
   Newsletter,
+  Footer,
 } from "@/components";
 import FlashDeal from "@/components/FlashDeal";
 import FlashOffers from "@/components/FlashOffers";
@@ -208,161 +209,169 @@ const vendors = [
   // Add more vendors with different background colors...
 ];
 
-// const products = [
-//   {
-//     id: "1",
-//     title: "Taylor Farms Broccoli Florets Vegetables",
-//     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8ZIkSTYSj5AVf5UBKk1PAeHJgFByn3.png",
-//     rating: {
-//       value: 4.8,
-//       count: 17000,
-//     },
-//     seller: {
-//       name: "Lucky Supermarket",
-//       icon: "/placeholder.svg",
-//     },
-//     price: {
-//       original: 28.99,
-//       current: 14.99,
-//     },
-//   },
-//   {
-//     id: "2",
-//     title: "Taylor Farms Broccoli Florets Vegetables 2",
-//     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8ZIkSTYSj5AVf5UBKk1PAeHJgFByn3.png",
-//     rating: {
-//       value: 4.8,
-//       count: 17000,
-//     },
-//     seller: {
-//       name: "Lucky Supermarket",
-//       icon: "/placeholder.svg",
-//     },
-//     price: {
-//       original: 28.99,
-//       current: 14.99,
-//     },
-//   },
-//   {
-//     id: "3",
-//     title: "Taylor Farms Broccoli Florets Vegetables 3",
-//     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8ZIkSTYSj5AVf5UBKk1PAeHJgFByn3.png",
-//     rating: {
-//       value: 4.8,
-//       count: 17000,
-//     },
-//     seller: {
-//       name: "Lucky Supermarket",
-//       icon: "/placeholder.svg",
-//     },
-//     price: {
-//       original: 28.99,
-//       current: 14.99,
-//     },
-//   },
-//   {
-//     id: "4",
-//     title: "Taylor Farms Broccoli Florets Vegetables 4",
-//     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8ZIkSTYSj5AVf5UBKk1PAeHJgFByn3.png",
-//     rating: {
-//       value: 4.8,
-//       count: 17000,
-//     },
-//     seller: {
-//       name: "Lucky Supermarket",
-//       icon: "/placeholder.svg",
-//     },
-//     price: {
-//       original: 28.99,
-//       current: 14.99,
-//     },
-//   },
-//   {
-//     id: "5",
-//     title: "Taylor Farms Broccoli Florets Vegetables 5",
-//     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8ZIkSTYSj5AVf5UBKk1PAeHJgFByn3.png",
-//     rating: {
-//       value: 4.8,
-//       count: 17000,
-//     },
-//     seller: {
-//       name: "Lucky Supermarket",
-//       icon: "/placeholder.svg",
-//     },
-//     price: {
-//       original: 28.99,
-//       current: 14.99,
-//     },
-//   },
-//   {
-//     id: "6",
-//     title: "Taylor Farms Broccoli Florets Vegetables 6",
-//     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8ZIkSTYSj5AVf5UBKk1PAeHJgFByn3.png",
-//     rating: {
-//       value: 4.8,
-//       count: 17000,
-//     },
-//     seller: {
-//       name: "Lucky Supermarket",
-//       icon: "/placeholder.svg",
-//     },
-//     price: {
-//       original: 28.99,
-//       current: 14.99,
-//     },
-//   },
-//   {
-//     id: "7",
-//     title: "Taylor Farms Broccoli Florets Vegetables 7",
-//     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8ZIkSTYSj5AVf5UBKk1PAeHJgFByn3.png",
-//     rating: {
-//       value: 4.8,
-//       count: 17000,
-//     },
-//     seller: {
-//       name: "Lucky Supermarket",
-//       icon: "/placeholder.svg",
-//     },
-//     price: {
-//       original: 28.99,
-//       current: 14.99,
-//     },
-//   },
-//   {
-//     id: "8",
-//     title: "Taylor Farms Broccoli Florets Vegetables 8",
-//     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8ZIkSTYSj5AVf5UBKk1PAeHJgFByn3.png",
-//     rating: {
-//       value: 4.8,
-//       count: 17000,
-//     },
-//     seller: {
-//       name: "Lucky Supermarket",
-//       icon: "/placeholder.svg",
-//     },
-//     price: {
-//       original: 28.99,
-//       current: 14.99,
-//     },
-//   },
-// ]
+const products = [
+  {
+    id: "1",
+    title: "Taylor Farms Broccoli Florets Vegetables",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8ZIkSTYSj5AVf5UBKk1PAeHJgFByn3.png",
+    rating: {
+      value: 4.8,
+      count: 17000,
+    },
+    seller: {
+      name: "Lucky Supermarket",
+      icon: "/placeholder.svg",
+    },
+    price: {
+      original: 28.99,
+      current: 14.99,
+    },
+  },
+  {
+    id: "2",
+    title: "Taylor Farms Broccoli Florets Vegetables 2",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8ZIkSTYSj5AVf5UBKk1PAeHJgFByn3.png",
+    rating: {
+      value: 4.8,
+      count: 17000,
+    },
+    seller: {
+      name: "Lucky Supermarket",
+      icon: "/placeholder.svg",
+    },
+    price: {
+      original: 28.99,
+      current: 14.99,
+    },
+  },
+  {
+    id: "3",
+    title: "Taylor Farms Broccoli Florets Vegetables 3",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8ZIkSTYSj5AVf5UBKk1PAeHJgFByn3.png",
+    rating: {
+      value: 4.8,
+      count: 17000,
+    },
+    seller: {
+      name: "Lucky Supermarket",
+      icon: "/placeholder.svg",
+    },
+    price: {
+      original: 28.99,
+      current: 14.99,
+    },
+  },
+  {
+    id: "4",
+    title: "Taylor Farms Broccoli Florets Vegetables 4",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8ZIkSTYSj5AVf5UBKk1PAeHJgFByn3.png",
+    rating: {
+      value: 4.8,
+      count: 17000,
+    },
+    seller: {
+      name: "Lucky Supermarket",
+      icon: "/placeholder.svg",
+    },
+    price: {
+      original: 28.99,
+      current: 14.99,
+    },
+  },
+  {
+    id: "5",
+    title: "Taylor Farms Broccoli Florets Vegetables 5",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8ZIkSTYSj5AVf5UBKk1PAeHJgFByn3.png",
+    rating: {
+      value: 4.8,
+      count: 17000,
+    },
+    seller: {
+      name: "Lucky Supermarket",
+      icon: "/placeholder.svg",
+    },
+    price: {
+      original: 28.99,
+      current: 14.99,
+    },
+  },
+  {
+    id: "6",
+    title: "Taylor Farms Broccoli Florets Vegetables 6",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8ZIkSTYSj5AVf5UBKk1PAeHJgFByn3.png",
+    rating: {
+      value: 4.8,
+      count: 17000,
+    },
+    seller: {
+      name: "Lucky Supermarket",
+      icon: "/placeholder.svg",
+    },
+    price: {
+      original: 28.99,
+      current: 14.99,
+    },
+  },
+  {
+    id: "7",
+    title: "Taylor Farms Broccoli Florets Vegetables 7",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8ZIkSTYSj5AVf5UBKk1PAeHJgFByn3.png",
+    rating: {
+      value: 4.8,
+      count: 17000,
+    },
+    seller: {
+      name: "Lucky Supermarket",
+      icon: "/placeholder.svg",
+    },
+    price: {
+      original: 28.99,
+      current: 14.99,
+    },
+  },
+  {
+    id: "8",
+    title: "Taylor Farms Broccoli Florets Vegetables 8",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8ZIkSTYSj5AVf5UBKk1PAeHJgFByn3.png",
+    rating: {
+      value: 4.8,
+      count: 17000,
+    },
+    seller: {
+      name: "Lucky Supermarket",
+      icon: "/placeholder.svg",
+    },
+    price: {
+      original: 28.99,
+      current: 14.99,
+    },
+  },
+];
 
-// const featuredProducts = [
-//   {
-//     id: "1",
-//     title: "Taylor Farms Broccoli Florets Vegetables",
-//     image:
-//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Nj9SycrjrPY3v5NvgRZHx5YU9fHrkv.png",
-//     rating: {
-//       value: 4.8,
-//       count: 17000,
-//     },
-//     price: {
-//       current: 1500.0,
-//       original: 1500.0,
-//     },
-//   },
-// ];
+const featuredProducts = [
+  {
+    id: "1",
+    title: "Taylor Farms Broccoli Florets Vegetables",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Nj9SycrjrPY3v5NvgRZHx5YU9fHrkv.png",
+    rating: {
+      value: 4.8,
+      count: 17000,
+    },
+    price: {
+      current: 1500.0,
+      original: 1500.0,
+    },
+  },
+];
 
 // const products = [
 //   {
@@ -424,36 +433,36 @@ const vendors = [
 //   // Add more products with different images
 // ];
 
-// const brands = [
-//   {
-//     id: "1",
-//     name: "Organic Food 1",
-//     image:
-//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
-//     href: "/brands/organic-food",
-//   },
-//   {
-//     id: "2",
-//     name: "Organic Food 2",
-//     image:
-//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
-//     href: "/brands/organic-food",
-//   },
-//   {
-//     id: "3",
-//     name: "Organic Food3",
-//     image:
-//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
-//     href: "/brands/organic-food",
-//   },
-//   {
-//     id: "4",
-//     name: "Organic Food 4",
-//     image:
-//       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
-//     href: "/brands/organic-food",
-//   },
-// ];
+const brands = [
+  {
+    id: "1",
+    name: "Organic Food 1",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
+    href: "/brands/organic-food",
+  },
+  {
+    id: "2",
+    name: "Organic Food 2",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
+    href: "/brands/organic-food",
+  },
+  {
+    id: "3",
+    name: "Organic Food3",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
+    href: "/brands/organic-food",
+  },
+  {
+    id: "4",
+    name: "Organic Food 4",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j8J4VW0h0Rc0gHVM69ZhXXvTDR0Yms.png",
+    href: "/brands/organic-food",
+  },
+];
 
 // const products = [
 //   {
@@ -486,7 +495,7 @@ export default function Home() {
   };
   return (
     <main className="min-h-screen flex flex-col">
-      {/* <HeaderTop />
+      <HeaderTop />
       <HeaderMiddle location="New York" />
       <HeaderMain />
       <Hero />
@@ -497,27 +506,27 @@ export default function Home() {
       <FlashOffers />
       <RecommendedProducts products={sampleProducts} />
       <HotDealsSection featuredDeal={featuredDeal} products={sampleProducts} />
-      <VendorSection vendors={vendors} /> */}
-      {/* <DeliveryBanner />
-      <OrganicFood products={products} /> */}
+      <VendorSection vendors={vendors} />
+      <DeliveryBanner />
+      <OrganicFood products={products} />
 
-      {/* <main className="container mx-auto px-4 py-12">
+      <main className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <ProductSections title="Featured Products" products={products} />
           <ProductSections title="Top Selling Products" products={products} />
           <ProductSections title="On-sale Products" products={products} />
           <ProductSections title="Top Rated Products" products={products} />
         </div>
-      </main> */}
-      {/* <BrandCarousel
+      </main>
+      <BrandCarousel
         brands={brands}
         itemsToShow={{
           mobile: 3,
           tablet: 5,
           desktop: 8,
         }}
-      /> */}
-      {/* <main>
+      />
+      <main>
         <NewArrivalSections
           products={products}
           itemsToShow={{
@@ -526,7 +535,7 @@ export default function Home() {
             desktop: 5,
           }}
         />
-      </main> */}
+      </main>
       <div className="relative">
         <div className="absolute inset-0 z-0">
           <img
@@ -538,6 +547,7 @@ export default function Home() {
         <div className="relative z-10">
           <ShippingSection />
           <Newsletter onSubscribe={handleSubscribe} />
+          <Footer />
         </div>
       </div>
     </main>
