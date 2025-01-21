@@ -11,12 +11,7 @@ export type {
 } from "./dashboard";
 export type { FAQItem } from "./faq";
 export type { Feature } from "./feature";
-export type {
-  FooterData,
-  FooterLink,
-  FooterSocialLink,
-  ContactInfo,
-} from "./footer";
+export type { FooterLink, ContactInfo } from "./footer";
 export type { SubMenuItem, MenuItem, NavigationItem } from "./navigation";
 // export type { Product, ProductCategory } from './product'
 export type { Profile } from "./profile";
@@ -72,3 +67,4 @@ export type {
   ShippingFeaturesProps,
   ShippingCardProps,
 } from "./shipping";
+export type { NewsletterFormProps, NewsletterProps } from "./newsletter";

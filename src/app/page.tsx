@@ -1,3 +1,4 @@
+"use client";
 import {
   CategoryMain,
   CategorySection,
@@ -11,6 +12,7 @@ import {
   ProductSections,
   BrandCarousel,
   ShippingSection,
+  Newsletter,
 } from "@/components";
 import FlashDeal from "@/components/FlashDeal";
 import FlashOffers from "@/components/FlashOffers";
@@ -475,7 +477,13 @@ const vendors = [
 
 // ];
 
+import BodyBottomBgImage from "../../public/images/body-bottom-bg.png";
 export default function Home() {
+  const handleSubscribe = async (email: string) => {
+    // Implement your newsletter subscription logic here
+    console.log("Subscribing email:", email);
+    await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate API call
+  };
   return (
     <main className="min-h-screen flex flex-col">
       {/* <HeaderTop />
@@ -519,7 +527,19 @@ export default function Home() {
           }}
         />
       </main> */}
-      <ShippingSection />
+      <div className="relative">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={BodyBottomBgImage.src}
+            alt="Shipping background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="relative z-10">
+          <ShippingSection />
+          <Newsletter onSubscribe={handleSubscribe} />
+        </div>
+      </div>
     </main>
   );
 }

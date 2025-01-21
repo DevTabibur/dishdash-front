@@ -1,35 +1,6 @@
-import React from "react";
-
-export interface IInformation {
-  title: string;
-  links: IInformationLinkItem[];
-}
-
-export interface IInformationLinkItem {
-  label: string;
-  href: string;
-}
-
-export interface ICompany {
-  title: string;
-  links: ICompanyLinkItem[];
-}
-
-export interface ICompanyLinkItem {
-  label: string;
-  href: string;
-}
-
-export interface ISocialLink {
+export interface SocialLink {
   platform: string;
-  href: string;
-  icon: React.ComponentType; // Accepts React components
-}
-
-export interface IServicesLink {
-  icon: React.ComponentType;
-  title: string;
-  description: string;
+  url: string;
 }
 
 export interface FooterLink {
@@ -37,32 +8,24 @@ export interface FooterLink {
   href: string;
 }
 
-export interface IQuickLinks {
+export interface FooterColumn {
   title: string;
-  links: IQuickLinkItem[];
-}
-
-export interface IQuickLinkItem {
-  label: string;
-  href: string;
-}
-export interface FooterSocialLink {
-  platform: string;
-  href: string;
-  icon: React.ReactNode;
+  links: FooterLink[];
 }
 
 export interface ContactInfo {
-  phone: string;
-  email: string;
   address: string;
+  phones: string[];
+  email: string;
 }
 
-export interface FooterData {
-  services: IServicesLink[];
-  quickLinks: IQuickLinks;
-  company: ICompany;
-  information: IInformation;
-  socialLinks: ISocialLink[];
-  copyright: string;
+export interface FooterProps {
+  description?: string;
+  contactInfo?: ContactInfo;
+  columns?: FooterColumn[];
+  socialLinks?: SocialLink[];
+  logo?: {
+    src: string;
+    alt: string;
+  };
 }
