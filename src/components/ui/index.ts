@@ -12,3 +12,6 @@ export { default as FlashDealCard } from "./FlashDealCard";
 export { default as FlashOfferCard } from "./FlashOfferCard";
 export { default as RecommendedProductCard } from "./RecommendedProductCard";
 export { default as HotDealsCard } from "./HotDealsCard";
+export { default as VendorCard } from "./VendorCard";
+export { default as VendorCurvedShape } from "./VendorCurvedShape";
+export { default as CircularLogo } from "./CircularLogo";

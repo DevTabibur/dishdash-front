@@ -5,6 +5,7 @@ import {
   Hero,
   RecommendedProducts,
   HotDealsSection,
+  VendorSection,
 } from "@/components";
 import FlashDeal from "@/components/FlashDeal";
 import FlashOffers from "@/components/FlashOffers";
@@ -13,6 +14,7 @@ import { HeaderTop } from "@/components/layout";
 import { HeaderMain } from "@/components/layout";
 import { HeaderMiddle } from "@/components/layout";
 import HotDealsImage from "../../public/images/hot-deals/hot-deals-img.png";
+import { VendorCard } from "@/components/ui";
 const sampleProducts = [
   {
     id: "1",
@@ -149,6 +151,54 @@ const products = [
   // Add more products...
 ];
 
+const vendors = [
+  {
+    id: "1",
+    name: "Organic Market",
+    logo: {
+      icon: "/placeholder.svg",
+      text: "NATURE FOOD",
+    },
+    deliveryTime: "6:15am",
+    promotion: {
+      amount: 5,
+      description: "Snack & Candy",
+    },
+    products: [
+      { id: "1", image: "/placeholder.svg", alt: "Juice" },
+      { id: "2", image: "/placeholder.svg", alt: "Snacks" },
+      { id: "3", image: "/placeholder.svg", alt: "Oranges" },
+      { id: "4", image: "/placeholder.svg", alt: "Fruits" },
+      { id: "5", image: "/placeholder.svg", alt: "Juice" },
+    ],
+    backgroundColor: "#F9F8E7",
+    href: "/vendors/organic-market",
+  },
+  {
+    id: "2",
+    name: "Safeway",
+    logo: {
+      icon: "/placeholder.svg",
+      text: "NATURE FOOD",
+    },
+    deliveryTime: "6:15am",
+    promotion: {
+      amount: 5,
+      description: "Snack & Candy",
+    },
+    products: [
+      { id: "1", image: "/placeholder.svg", alt: "Juice" },
+      { id: "2", image: "/placeholder.svg", alt: "Snacks" },
+      { id: "3", image: "/placeholder.svg", alt: "Oranges" },
+      { id: "4", image: "/placeholder.svg", alt: "Fruits" },
+      { id: "5", image: "/placeholder.svg", alt: "Juice" },
+    ],
+    backgroundColor: "#E3F2FD",
+    href: "/vendors/safeway",
+  },
+  // Add more vendors with different background colors...
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
@@ -163,6 +213,7 @@ export default function Home() {
       <FlashOffers />
       <RecommendedProducts products={sampleProducts} />
       <HotDealsSection featuredDeal={featuredDeal} products={sampleProducts} />
+      <VendorSection vendors={vendors} />
     </main>
   );
 }

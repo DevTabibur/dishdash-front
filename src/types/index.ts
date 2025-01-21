@@ -57,3 +57,9 @@ export type {
   RecommendedCategory,
 } from "./recommendedProduct";
 export type { HotDeal, HotDealProduct, CountdownTime } from "./hotDeals";
+export type {
+  Vendor,
+  VendorProduct,
+  VendorCardProps,
+  VendorSectionProps,
+} from "./vendor";
