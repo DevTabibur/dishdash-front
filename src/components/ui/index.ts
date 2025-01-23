@@ -24,3 +24,5 @@ export { default as NewsletterForm } from "./NewsletterForm";
 export { default as StepIndicator } from "./StepIndicator";
 export { default as CheckoutForm } from "./CheckoutForm";
 export { default as CartReview } from "./CartReview";
+export { default as SearchBar } from "./SearchBar";
+export { default as SortDropdown } from "./SortDropdown";

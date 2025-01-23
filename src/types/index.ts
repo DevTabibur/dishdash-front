@@ -59,12 +59,12 @@ export type {
   RecommendedCategory,
 } from "./recommendedProduct";
 export type { HotDeal, HotDealProduct, CountdownTime } from "./hotDeals";
-export type {
-  Vendor,
-  VendorProduct,
-  VendorCardProps,
-  VendorSectionProps,
-} from "./vendor";
+// export type {
+//   Vendor,
+//   VendorProduct,
+//   VendorCardProps,
+//   VendorSectionProps,
+// } from "./vendor";
 export type { OrganicFoodProps } from "./organicFood";
 export type { ProductSectionProps } from "./productSection";
 export type { Brand, BrandCarouselProps, BrandLogoProps } from "./brands";
@@ -92,3 +92,12 @@ export type {
   CartReviewProps,
   StepIndicatorProps,
 } from "./checkout";
+export type {
+  Vendor,
+  VendorListProps,
+  VendorCardProps,
+  SearchBarProps,
+  SortOption,
+  SortDropdownProps,
+  SortBy,
+} from "./vendorList";
