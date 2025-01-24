@@ -75,7 +75,7 @@ const page = () => {
     <>
       <Breadcrumb />
       <Cart
-        items={items}
+        items={items as any[]}
         totals={totals}
         onUpdateQuantity={handleUpdateQuantity}
         onRemove={handleRemove}

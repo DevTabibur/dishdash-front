@@ -1,5 +1,22 @@
-## Important Notes
+## Project Documentation
 
-1. Demo project link is. https://preview.themeforest.net/item/marketpro-ecommerce-multivendor-react-next-js-template-multipurpose/full_screen_preview/55332798?_ga=2.143645622.285975635.1736941305-2089600239.1736700662&_gac=1.90591720.1736941305.Cj0KCQiA1p28BhCBARIsADP9HrN_2sgmrN4Rpm2keNKHnFVTzndNkY1Nh-FU9I6WH3FvmCYjn3cAccUaAjUQEALw_wcB
+### Status
 
-2. Demo 4 (the Whole Theme) ==> https://preview.themeforest.net/item/tastydaily-grocery-store-food-woocommerce-theme/full_screen_preview/48790891?_ga=2.180394788.285975635.1736941305-2089600239.1736700662&_gac=1.49172820.1736941305.Cj0KCQiA1p28BhCBARIsADP9HrN_2sgmrN4Rpm2keNKHnFVTzndNkY1Nh-FU9I6WH3FvmCYjn3cAccUaAjUQEALw_wcB
+🚧 **Currently Paused - Work in Progress** 🚧
+
+This project is temporarily paused and will be continued in the future. The development is based on the following reference designs:
+
+### Reference Designs
+
+1. MarketPro E-commerce Template
+
+   - Multi-vendor React/Next.js template
+   - [View Demo](https://preview.themeforest.net/item/marketpro-ecommerce-multivendor-react-next-js-template-multipurpose/full_screen_preview/55332798)
+
+2. TastyDaily Grocery Store Theme
+   - Complete grocery e-commerce theme
+   - [View Demo](https://preview.themeforest.net/item/tastydaily-grocery-store-food-woocommerce-theme/full_screen_preview/48790891)
+
+### Future Development
+
+The project will resume development at a later date, incorporating features and design elements inspired by the above references.

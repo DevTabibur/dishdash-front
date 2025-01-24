@@ -19,8 +19,9 @@ export default [
       ...pluginReact.configs.flat.recommended.rules,
       "react/react-in-jsx-scope": "off", // Disable React-in-JSX-scope rule
       "react/jsx-uses-react": "off",     // Disable related rule
+      "react/jsx-no-undef": "warn",     // Add rule to catch undefined components
       "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/no-explicit-any": "warn", 
       "@typescript-eslint/no-empty-function": "off",
       "@typescript-eslint/no-empty-object-type": "warn",
       "@typescript-eslint/no-non-null-assertion": "off",
@@ -29,12 +30,7 @@ export default [
       "@typescript-eslint/no-unnecessary-type-arguments": "off",
       "@typescript-eslint/no-unnecessary-condition": "off",
       "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
-      "@typescript-eslint/no-unnecessary-catch": "off",
-      "@typescript-eslint/no-unnecessary-type-assertion": "off",
-      "@typescript-eslint/no-unnecessary-type-arguments": "off",
-      "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
-      "@typescript-eslint/no-unnecessary-catch": "off",
+      "@typescript-eslint/no-unnecessary-catch": "off"
     },
   },
 ];
-

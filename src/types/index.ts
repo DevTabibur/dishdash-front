@@ -96,7 +96,7 @@ export type {
   Vendor,
   VendorListProps,
   VendorCardProps,
-  SearchBarProps,
+  // SearchBarProps,
   SortOption,
   SortDropdownProps,
   SortBy,

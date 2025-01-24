@@ -1,5 +1,7 @@
-// import { Mail, Facebook, Twitter, Linkedin, Share2 } from 'lucide-react'
-// import { Button } from '@/components/ui/button'
+import { FaEnvelope, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { Button } from "../ui";
+import { FaXTwitter } from "react-icons/fa6";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 interface SocialShareProps {
   url: string;
@@ -7,48 +9,47 @@ interface SocialShareProps {
 }
 
 export default function SocialShare({ url, title }: SocialShareProps) {
-  const encodedUrl = encodeURIComponent(url)
-  const encodedTitle = encodeURIComponent(title)
+  const encodedUrl = encodeURIComponent(url);
+  const encodedTitle = encodeURIComponent(title);
 
   const shareLinks = [
     {
-      icon: Mail,
+      icon: FaEnvelope,
       href: `mailto:?subject=${encodedTitle}&body=${encodedUrl}`,
-      color: 'bg-[#EA4335] hover:bg-[#EA4335]/90'
+      color: "bg-[#EA4335] hover:bg-[#EA4335]/90",
     },
     {
-      icon: Twitter,
+      icon: FaXTwitter,
       href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
-      color: 'bg-[#1DA1F2] hover:bg-[#1DA1F2]/90'
+      color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/90",
     },
     {
-      icon: Facebook,
+      icon: FaFacebookF,
       href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-      color: 'bg-[#1877F2] hover:bg-[#1877F2]/90'
+      color: "bg-[#1877F2] hover:bg-[#1877F2]/90",
     },
     {
-      icon: Linkedin,
+      icon: FaLinkedinIn,
       href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
-      color: 'bg-[#0A66C2] hover:bg-[#0A66C2]/90'
+      color: "bg-[#0A66C2] hover:bg-[#0A66C2]/90",
     },
     {
-      icon: Share2,
+      icon: IoLogoWhatsapp,
       href: `whatsapp://send?text=${encodedTitle}%20${encodedUrl}`,
-      color: 'bg-[#25D366] hover:bg-[#25D366]/90'
-    }
-  ]
+      color: "bg-[#25D366] hover:bg-[#25D366]/90",
+    },
+  ];
 
   return (
     <div className="flex gap-2">
       {shareLinks.map((link, index) => {
-        const Icon = link.icon
+        const Icon = link.icon;
         return (
           <Button
             key={index}
-            variant="ghost"
-            size="icon"
+            variant="outline"
+            size="sm"
             className={`${link.color} text-white`}
-            asChild
           >
             <a
               href={link.href}
@@ -59,9 +60,8 @@ export default function SocialShare({ url, title }: SocialShareProps) {
               <Icon className="size-4" />
             </a>
           </Button>
-        )
+        );
       })}
     </div>
-  )
+  );
 }
-

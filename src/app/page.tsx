@@ -414,7 +414,8 @@ export default function Home() {
   };
   return (
     <main className="min-h-screen flex flex-col">
-      <HeaderTop />
+      <h1>It is working</h1>
+      {/* <HeaderTop />
       <HeaderMiddle location="New York" />
       <HeaderMain />
       <Hero />
@@ -468,7 +469,7 @@ export default function Home() {
           <Newsletter onSubscribe={handleSubscribe} />
           <Footer />
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }

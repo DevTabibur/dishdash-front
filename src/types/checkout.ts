@@ -10,6 +10,9 @@ export interface CartItem {
   name: string;
   image: string;
   price: number;
+  rating?: number;
+  reviews?: number;
+  tags?: string[];
   quantity: number;
 }
 
