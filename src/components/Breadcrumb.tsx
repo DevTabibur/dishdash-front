@@ -29,7 +29,7 @@ const Breadcrumb = ({
 
   return (
     <div className={`bg-[#FFF5F5] ${className}`}>
-      <div className="container mx-auto px-4">
+      <div className="max-w-[90%] mx-auto px-4">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center py-4 gap-2">
           {/* Page Title */}
           <h1 className="text-[#1A237E] text-xl font-semibold ">{pageTitle}</h1>
