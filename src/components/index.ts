@@ -20,3 +20,4 @@ export { default as Footer } from "./Footer";
 export { default as FooterBottom } from "./FooterBottom";
 export { default as Breadcrumb } from "./Breadcrumb";
 export { default as Cart } from "./Cart";
+export { default as AuthForm } from "./forms/AuthForm";

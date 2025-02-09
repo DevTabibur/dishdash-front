@@ -406,6 +406,7 @@ const brands = [
 
 import BodyBottomBgImage from "../../public/images/body-bottom-bg.png";
 import Breadcrumb from "@/components/Breadcrumb";
+import { Toaster } from "react-hot-toast";
 export default function Home() {
   const handleSubscribe = async (email: string) => {
     // Implement your newsletter subscription logic here
@@ -415,6 +416,7 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
       <h1>It is working</h1>
+
       {/* <HeaderTop />
       <HeaderMiddle location="New York" />
       <HeaderMain />

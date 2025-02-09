@@ -101,3 +101,15 @@ export type {
   SortDropdownProps,
   SortBy,
 } from "./vendorList";
+export type {
+  VendorDetailsProps,
+  ProductCategorySidebarProps,
+  ProductCategorySidebar,
+} from "./productCategorySidebar";
+export type {
+  SocialLoginProps,
+  AuthFormProps,
+  TabProps,
+  RegisterFormValues,
+  LoginFormValues,
+} from "./auth";

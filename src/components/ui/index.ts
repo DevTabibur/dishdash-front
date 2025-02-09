@@ -26,3 +26,6 @@ export { default as CheckoutForm } from "./CheckoutForm";
 export { default as CartReview } from "./CartReview";
 export { default as SearchBar } from "./SearchBar";
 export { default as SortDropdown } from "./SortDropdown";
+export { default as ProductCategorySidebar } from "./ProductCategorySidebar";
+export { default as SocialLogin } from "./SocialLogin";
+export { default as Tab } from "./Tab";
