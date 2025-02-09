@@ -21,3 +21,5 @@ export { default as FooterBottom } from "./FooterBottom";
 export { default as Breadcrumb } from "./Breadcrumb";
 export { default as Cart } from "./Cart";
 export { default as AuthForm } from "./forms/AuthForm";
+export { default as ForgetForm } from "./forms/ForgetForm";
+export { default as ResetForm } from "./forms/ResetForm";

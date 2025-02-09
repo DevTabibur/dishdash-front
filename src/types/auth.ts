@@ -4,7 +4,7 @@ export interface LoginFormValues {
 }
 
 export interface RegisterFormValues {
-  fullname: string;
+  username: string;
   email: string;
   password: string;
 }
@@ -21,4 +21,25 @@ export interface AuthFormProps {
 
 export interface SocialLoginProps {
   type: "login" | "register";
+}
+
+export interface ForgotPasswordFormValues {
+  email: string;
+}
+
+export interface ResetPasswordFormValues {
+  password: string;
+  confirmPassword: string;
+}
+
+export interface PasswordRequirementProps {
+  met: boolean;
+  text: string;
+}
+
+export interface SuccessMessageProps {
+  title: string;
+  message: string;
+  actionText: string;
+  actionHref: string;
 }

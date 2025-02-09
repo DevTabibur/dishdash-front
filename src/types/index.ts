@@ -112,4 +112,8 @@ export type {
   TabProps,
   RegisterFormValues,
   LoginFormValues,
+  ForgotPasswordFormValues,
+  ResetPasswordFormValues,
+  PasswordRequirementProps,
+  SuccessMessageProps,
 } from "./auth";

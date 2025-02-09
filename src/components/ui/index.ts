@@ -29,3 +29,5 @@ export { default as SortDropdown } from "./SortDropdown";
 export { default as ProductCategorySidebar } from "./ProductCategorySidebar";
 export { default as SocialLogin } from "./SocialLogin";
 export { default as Tab } from "./Tab";
+export { default as SuccessMessage } from "./SuccessMessage";
+export { default as PasswordRequirement } from "./PasswordRequirement";
