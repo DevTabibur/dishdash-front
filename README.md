@@ -1,5 +1,7 @@
 ## Project Documentation
 
+1. need bottom bar for like Accounts
+
 ### Status
 
 🚧 **Currently Paused - Work in Progress** 🚧

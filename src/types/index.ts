@@ -34,7 +34,7 @@ export type {
   TransactionFilters,
 } from "./transaction";
 export type { HeaderMiddleProps, SearchBarProps } from "./headerMiddle";
-export type { HeaderProps } from "./headerTop";
+export type { HeaderProps, NavItem, DropdownProps } from "./headerTop";
 export type {
   HeaderMainProps,
   MobileMenuProps,

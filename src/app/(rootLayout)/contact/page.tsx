@@ -24,11 +24,6 @@ const page = () => {
             </p>
           </div>
 
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <ContactForm />
-            <ContactInfo />
-          </div> */}
-
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
             <div className="md:col-span-7">
               <ContactForm />
