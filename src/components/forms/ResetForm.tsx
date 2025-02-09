@@ -149,8 +149,8 @@ const ResetForm = ({ token }: { token: string }) => {
                 Password Requirements:
               </h3>
               <PasswordRequirement
-                met={values.password.length >= 8}
-                text="At least 8 characters"
+                met={values.password.length >= 6}
+                text="At least 6 characters"
               />
               <PasswordRequirement
                 met={/[A-Z]/.test(values.password)}

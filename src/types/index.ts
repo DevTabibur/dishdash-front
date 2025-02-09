@@ -1,6 +1,10 @@
 export type { BlogPost } from "./blog";
 export type { CaseStudy } from "./caseStudy";
-export type { ContactFormValues } from "./contact";
+export type {
+  ContactFormValues,
+  ContactInfoItem,
+  ContactSocialLink,
+} from "./contact";
 export type {
   User,
   DashboardMenuItem,

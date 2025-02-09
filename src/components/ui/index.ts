@@ -31,3 +31,4 @@ export { default as SocialLogin } from "./SocialLogin";
 export { default as Tab } from "./Tab";
 export { default as SuccessMessage } from "./SuccessMessage";
 export { default as PasswordRequirement } from "./PasswordRequirement";
+export { default as ContactInfo } from "./ContactInfo";

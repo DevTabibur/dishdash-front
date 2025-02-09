@@ -1,15 +1,20 @@
+import type React from "react";
+
 export interface ContactFormValues {
-  fullName: string;
+  name: string;
   email: string;
   subject: string;
   message: string;
 }
 
-export interface SocialLink {
-  href: Url;
-  id: string;
-  name: string;
+export interface ContactSocialLink {
   icon: React.ReactNode;
-  placeholder: string;
-  type: string;
+  url: string;
+  name: string;
+}
+
+export interface ContactInfoItem {
+  icon: React.ReactNode;
+  title: string;
+  content: string;
 }

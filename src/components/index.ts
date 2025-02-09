@@ -23,3 +23,4 @@ export { default as Cart } from "./Cart";
 export { default as AuthForm } from "./forms/AuthForm";
 export { default as ForgetForm } from "./forms/ForgetForm";
 export { default as ResetForm } from "./forms/ResetForm";
+export { default as ContactForm } from "./forms/ContactForm";
