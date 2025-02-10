@@ -1,4 +1,4 @@
-import type { ShippingCardProps } from "@/types/shipping";
+import type { ShippingCardProps } from "@/types";
 
 const ShippingCard = ({ feature }: ShippingCardProps) => {
   return (

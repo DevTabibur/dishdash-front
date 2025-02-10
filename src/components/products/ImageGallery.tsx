@@ -1,16 +1,16 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Image from 'next/image'
+import { useState } from "react";
+import Image from "next/image";
 // import { cn } from '@/lib/utils'
-import type { ProductImage } from '@/types/product'
+import type { ProductImage } from "@/types";
 
 interface ImageGalleryProps {
   images: ProductImage[];
 }
 
 const ImageGallery = ({ images }: ImageGalleryProps) => {
-  const [selectedImage, setSelectedImage] = useState(0)
+  const [selectedImage, setSelectedImage] = useState(0);
 
   return (
     <div className="flex gap-4">
@@ -46,7 +46,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ImageGallery
+export default ImageGallery;

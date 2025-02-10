@@ -19,7 +19,7 @@ import {
   FaBars,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import type { HeaderMainProps, MenuItem } from "@/types/headerMain";
+import type { HeaderMainProps, MenuItem } from "@/types";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { TbCategoryFilled } from "react-icons/tb";
 

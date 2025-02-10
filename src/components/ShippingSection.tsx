@@ -1,5 +1,5 @@
 import { FaTruck, FaShieldAlt, FaCreditCard, FaHeadset } from "react-icons/fa";
-import type { ShippingFeaturesProps, ShippingFeature } from "@/types/shipping";
+import type { ShippingFeaturesProps, ShippingFeature } from "@/types";
 import { ShippingCard } from "./ui";
 
 const defaultFeatures: ShippingFeature[] = [

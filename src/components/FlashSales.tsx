@@ -4,12 +4,11 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { FlashSaleCard } from "./ui";
-import type { FlashSalesProps, FlashSaleItem } from "@/types/flashSales";
+import type { FlashSalesProps, FlashSaleItem } from "@/types";
 import Link from "next/link";
 import FreshVegetables from "../../public/images/category/vegetables-category.png";
 import DailySnacks from "../../public/images/category/snacks-categoyr.png";
 import FreshFruits from "../../public/images/category/fresh-fruits-category.png";
-
 import FlashSaleBg1 from "../../public/images/flash-sale/flash-sale-bg1.png";
 import FlashSaleBg2 from "../../public/images/flash-sale/flash-sale-bg2.png";
 

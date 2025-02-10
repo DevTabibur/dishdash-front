@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
-import type { ProductCardProps } from "@/types/productSection";
+import type { ProductCardProps } from "@/types";
 
 const ProductSectionCard = ({ product }: ProductCardProps) => {
   return (

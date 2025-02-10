@@ -1,7 +1,7 @@
 "use client";
 
 import { FlashDealCard } from "./ui";
-import type { FlashDealProduct } from "@/types/flashDealCard";
+import type { FlashDealProduct } from "@/types";
 import FlashDeal1 from "../../public/images/flash-sale/flash-deal-1.png";
 import FlashDeal2 from "../../public/images/flash-sale/flash-deal-2.png";
 import FlashDeal3 from "../../public/images/flash-sale/flash-deal-3.png";

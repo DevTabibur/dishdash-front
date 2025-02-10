@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import type { NewsletterFormProps } from "@/types/newsletter";
+import type { NewsletterFormProps } from "@/types";
 
 const NewsletterForm = ({ onSubmit, isLoading }: NewsletterFormProps) => {
   const [email, setEmail] = useState("");

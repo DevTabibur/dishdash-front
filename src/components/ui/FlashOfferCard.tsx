@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-import type { FlashOfferProps } from "@/types/flashOffer";
+import type { FlashOfferProps } from "@/types";
 
 const FlashOfferCard = ({
   logo = "/placeholder.svg",

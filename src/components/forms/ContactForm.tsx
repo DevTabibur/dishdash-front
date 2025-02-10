@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import { FaUser, FaEnvelope, FaPen, FaComment } from "react-icons/fa";
 
-import type { ContactFormValues } from "@/types/contact";
+import type { ContactFormValues } from "@/types";
 import { contactFormSchema } from "@/schemas/contact.schema";
 
 const ContactForm = () => {

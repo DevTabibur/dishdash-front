@@ -1,22 +1,17 @@
-import { CategoryMain, CategorySection, Hero } from "@/components";
+import { CategoryMain, CategorySection, FlashSales, Hero } from "@/components";
 import { HeaderMain, HeaderMiddle, HeaderTop } from "@/components/layout";
 
 export default function Home() {
   return (
     <main>
-      <HeaderTop />
+      {/* <HeaderTop />
       <HeaderMiddle location="New York" />
       <HeaderMain />
       <Hero />
-      <CategorySection />
-      <CategoryMain />
+      <CategorySection /> */}
+      <CategoryMain /> {/* <CategoryMain categories={[]} /> */}
+      <FlashSales /> {/* <FlashSales items={[]} /> */}
       {/*
-      <HeaderMiddle location="New York" />
-      <HeaderMain />
-      <Hero />
-      <CategorySection />
-      <CategoryMain />
-      <FlashSales />
       <FlashDeal />
       <FlashOffers />
       <RecommendedProducts products={sampleProducts} />

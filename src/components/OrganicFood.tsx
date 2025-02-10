@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import type { OrganicFoodProps } from "@/types/organicFood";
+import type { OrganicFoodProps } from "@/types";
 import { OrganicProductCard } from "./ui";
 
 const OrganicFood = ({ products }: OrganicFoodProps) => {

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import type { ProductSectionProps } from "@/types/productSection";
+import type { ProductSectionProps } from "@/types";
 import ProductSectionCard from "./ui/ProductSectionCard";
 
 export const ProductSection = ({ title, products }: ProductSectionProps) => {

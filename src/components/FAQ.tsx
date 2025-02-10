@@ -1,43 +1,41 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Script from 'next/script'
-import { FiPlus, FiMinus } from 'react-icons/fi'
-import type { FAQItem } from '@/types/faq'
+import { useState } from "react";
+import Script from "next/script";
+import { FiPlus, FiMinus } from "react-icons/fi";
+import type { FAQItem } from "@/types";
 
 interface FAQSectionProps {
-  title?: string
-  description?: string
-  faqs: FAQItem[]
+  title?: string;
+  description?: string;
+  faqs: FAQItem[];
 }
 
 const FAQSection = ({
   title = "Frequently Asked Questions",
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hac ridiculus id aliquet elementum morbi sit viverra bibendum viverra. Senectus lacinia aliquet mi feugiat metus, mauris justo.",
-  faqs
+  faqs,
 }: FAQSectionProps) => {
-  const [openItems, setOpenItems] = useState<string[]>([])
+  const [openItems, setOpenItems] = useState<string[]>([]);
 
   const toggleItem = (id: string) => {
-    setOpenItems(prev => 
-      prev.includes(id) 
-        ? prev.filter(item => item !== id)
-        : [...prev, id]
-    )
-  }
+    setOpenItems((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id],
+    );
+  };
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
+    mainEntity: faqs.map((faq) => ({
       "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
+      name: faq.question,
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  }
+        text: faq.answer,
+      },
+    })),
+  };
 
   return (
     <>
@@ -49,12 +47,13 @@ const FAQSection = ({
       <section className="py-16 px-4" aria-labelledby="faq-heading">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2
+              id="faq-heading"
+              className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+            >
               {title}
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              {description}
-            </p>
+            <p className="text-gray-600 max-w-2xl mx-auto">{description}</p>
           </div>
 
           <div className="space-y-4">
@@ -75,21 +74,25 @@ const FAQSection = ({
                   <span className="ml-4">
                     {openItems.includes(faq.id) ? (
                       <div className="bg-pink-200 rounded-full p-1">
-                        <FiMinus className="w-5 h-5 text-pink-500" aria-hidden="true" />
+                        <FiMinus
+                          className="w-5 h-5 text-pink-500"
+                          aria-hidden="true"
+                        />
                       </div>
                     ) : (
                       <div className="bg-pink-200 rounded-full p-1">
-                        <FiPlus className="w-5 h-5 text-pink-500" aria-hidden="true" />
+                        <FiPlus
+                          className="w-5 h-5 text-pink-500"
+                          aria-hidden="true"
+                        />
                       </div>
                     )}
                   </span>
                 </button>
-                
+
                 {openItems.includes(faq.id) && (
                   <div id={`faq-answer-${faq.id}`} className="px-6 pb-6">
-                    <p className="text-gray-600">
-                      {faq.answer}
-                    </p>
+                    <p className="text-gray-600">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -98,8 +101,7 @@ const FAQSection = ({
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default FAQSection
-
+export default FAQSection;

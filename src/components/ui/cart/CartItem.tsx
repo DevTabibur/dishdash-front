@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FaStar, FaMinus, FaPlus, FaTimes } from "react-icons/fa";
-import type { CartItemProps } from "@/types/cart";
+import type { CartItemProps } from "@/types";
 
 const CartItem = ({ item, onUpdateQuantity, onRemove }: CartItemProps) => {
   return (

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-import type { HotDealsCardProps, CountdownTime } from "@/types/hotDeals";
+import type { HotDealsCardProps, CountdownTime } from "@/types";
 
 const calculateTimeLeft = (endDate: string): CountdownTime => {
   const difference = +new Date(endDate) - +new Date();

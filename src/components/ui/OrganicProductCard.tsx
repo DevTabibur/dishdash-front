@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FaStar, FaStore, FaShoppingCart } from "react-icons/fa";
-import type { ProductCardProps } from "@/types/organicFood";
+import type { ProductCardProps } from "@/types";
 
 const OrganicProductCard = ({ product, onAddToCart }: ProductCardProps) => {
   return (

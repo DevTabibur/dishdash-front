@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { FaStar, FaShoppingCart } from "react-icons/fa";
-import type { FlashDealProductCardProps } from "@/types/flashDealCard";
+import type { FlashDealProductCardProps } from "@/types";
 
 const FlashDealCard = ({ product, onAddToCart }: FlashDealProductCardProps) => {
   const [isHovered, setIsHovered] = useState(false);

@@ -1,5 +1,5 @@
 import { FaCheck, FaTimes } from "react-icons/fa";
-import type { PasswordRequirementProps } from "@/types/auth";
+import type { PasswordRequirementProps } from "@/types";
 
 const PasswordRequirement = ({ met, text }: PasswordRequirementProps) => {
   return (

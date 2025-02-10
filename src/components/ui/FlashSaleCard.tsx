@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-import type { FlashSaleCardProps } from "@/types/flashSales";
+import type { FlashSaleCardProps } from "@/types";
 import Countdown from "./CountDown";
 
 const FlashSaleCard = ({ item }: FlashSaleCardProps) => {

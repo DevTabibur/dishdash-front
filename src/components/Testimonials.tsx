@@ -1,32 +1,32 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Image from 'next/image'
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
+import { useState } from "react";
+import Image from "next/image";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
-import type { Testimonial } from '@/types/testimonial'
-import StarRating from './StarRating'
+import type { Testimonial } from "@/types";
+import StarRating from "./StarRating";
 
 interface TestimonialsProps {
-  testimonials: Testimonial[]
+  testimonials: Testimonial[];
 }
 
 const Testimonials = ({ testimonials }: TestimonialsProps) => {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrevious = () => {
-    setCurrentIndex((prev) => 
-      prev === 0 ? testimonials.length - 1 : prev - 1
-    )
-  }
+    setCurrentIndex((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1,
+    );
+  };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => 
-      prev === testimonials.length - 1 ? 0 : prev + 1
-    )
-  }
+    setCurrentIndex((prev) =>
+      prev === testimonials.length - 1 ? 0 : prev + 1,
+    );
+  };
 
-  const currentTestimonial = testimonials[currentIndex]
+  const currentTestimonial = testimonials[currentIndex];
 
   return (
     <section className="py-16 px-4">
@@ -44,15 +44,15 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="relative z-10">
               <StarRating rating={currentTestimonial.rating} />
-              
+
               <div className="text-gray-400 text-sm mt-2 mb-4">
                 {currentTestimonial.date}
               </div>
-              
+
               <blockquote className="text-gray-600 text-lg mb-6">
                 {currentTestimonial.content}
               </blockquote>
-              
+
               <div className="flex items-center gap-2">
                 <div className="h-1 w-8 bg-[#FF6B98]" />
                 <div className="font-medium">
@@ -92,8 +92,7 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Testimonials
-
+export default Testimonials;

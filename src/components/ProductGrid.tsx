@@ -1,43 +1,50 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Script from 'next/script'
-import type { Product, ProductCategory } from '@/types/product'
-import ProductCard from './ProductCard'
-
+import { useState } from "react";
+import Script from "next/script";
+import type { Product, ProductCategory } from "@/types";
+import ProductCard from "./ProductCard";
 
 interface ProductGridProps {
-  products: Product[]
-  onAddToCart: (productId: string, quantity: number) => void
+  products: Product[];
+  onAddToCart: (productId: string, quantity: number) => void;
 }
 
-const categories: ProductCategory[] = ['All', 'Male', 'Female', 'Children', 'Others']
+const categories: ProductCategory[] = [
+  "All",
+  "Male",
+  "Female",
+  "Children",
+  "Others",
+];
 
 const ProductGrid = ({ products, onAddToCart }: ProductGridProps) => {
-  const [selectedCategory, setSelectedCategory] = useState<ProductCategory>('All')
+  const [selectedCategory, setSelectedCategory] =
+    useState<ProductCategory>("All");
 
-  const filteredProducts = selectedCategory === 'All'
-    ? products
-    : products.filter(product => product.category === selectedCategory)
+  const filteredProducts =
+    selectedCategory === "All"
+      ? products
+      : products.filter((product) => product.category === selectedCategory);
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "itemListElement": filteredProducts.map((product, index) => ({
+    itemListElement: filteredProducts.map((product, index) => ({
       "@type": "ListItem",
-      "position": index + 1,
-      "item": {
+      position: index + 1,
+      item: {
         "@type": "Product",
-        "name": product.name,
-        "image": product.image,
-        "offers": {
+        name: product.name,
+        image: product.image,
+        offers: {
           "@type": "Offer",
-          "price": product.price,
-          "priceCurrency": "USD"
-        }
-      }
-    }))
-  }
+          price: product.price,
+          priceCurrency: "USD",
+        },
+      },
+    })),
+  };
 
   return (
     <>
@@ -55,9 +62,10 @@ const ProductGrid = ({ products, onAddToCart }: ProductGridProps) => {
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-full transition-colors
-                  ${selectedCategory === category
-                    ? 'bg-[#FF6B98] text-white'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  ${
+                    selectedCategory === category
+                      ? "bg-[#FF6B98] text-white"
+                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                   }`}
               >
                 {category}
@@ -85,8 +93,7 @@ const ProductGrid = ({ products, onAddToCart }: ProductGridProps) => {
         )}
       </section>
     </>
-  )
-}
+  );
+};
 
-export default ProductGrid
-
+export default ProductGrid;

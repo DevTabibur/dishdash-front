@@ -1,8 +1,8 @@
-import { Feature } from '@/types/feature'
+import { Feature } from "@/types";
 
 interface FeatureCardProps {
-  feature: Feature
-  isLast?: boolean
+  feature: Feature;
+  isLast?: boolean;
 }
 
 const FeatureCard = ({ feature, isLast = false }: FeatureCardProps) => {
@@ -14,7 +14,7 @@ const FeatureCard = ({ feature, isLast = false }: FeatureCardProps) => {
           bg-gradient-to-br shadow-lg`}
         style={{
           backgroundImage: `linear-gradient(to bottom right, ${feature.color.from}, ${feature.color.to})`,
-          boxShadow: `0 4px 14px ${feature.color.shadow}`
+          boxShadow: `0 4px 14px ${feature.color.shadow}`,
         }}
       >
         {feature.icon}
@@ -24,9 +24,7 @@ const FeatureCard = ({ feature, isLast = false }: FeatureCardProps) => {
       {!isLast && (
         <div className="hidden md:block absolute top-8 left-[calc(100%_-_32px)] w-[calc(100%_-_32px)] h-0.5">
           <div className="w-full h-full border-t-2 border-dashed border-gray-300" />
-          <div 
-            className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 transform rotate-45 border-t-2 border-r-2 border-gray-300"
-          />
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 transform rotate-45 border-t-2 border-r-2 border-gray-300" />
         </div>
       )}
 
@@ -38,8 +36,7 @@ const FeatureCard = ({ feature, isLast = false }: FeatureCardProps) => {
         {feature.description}
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default FeatureCard
-
+export default FeatureCard;

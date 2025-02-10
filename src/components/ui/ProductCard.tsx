@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { FiMinus, FiPlus, FiStar } from "react-icons/fi";
-import type { Product } from "@/types/organicFood";
+import type { Product } from "@/types";
 
 interface ProductCardProps {
   product: Product;

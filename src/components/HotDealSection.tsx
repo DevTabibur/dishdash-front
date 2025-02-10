@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import type { HotDealsSectionProps } from "@/types/hotDeals";
+import type { HotDealsSectionProps } from "@/types";
 import { HotDealsCard, RecommendedProductCard } from "./ui";
 
 const HotDealsSection = ({ featuredDeal, products }: HotDealsSectionProps) => {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import type { CountdownProps } from "@/types/flashSales";
+import type { CountdownProps } from "@/types";
 
 const Countdown = ({ endDate }: CountdownProps) => {
   const [timeLeft, setTimeLeft] = useState({

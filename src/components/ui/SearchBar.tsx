@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { FaSearch } from "react-icons/fa";
-import type { SearchBarProps } from "@/types/vendorList";
+import type { SearchBarProps } from "@/types";
 
 const SearchBar = ({ onSearch, initialValue = "" }: SearchBarProps) => {
   const [query, setQuery] = useState(initialValue);

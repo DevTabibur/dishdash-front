@@ -1,4 +1,4 @@
-import type { CategoryMainProps, CategoryItem } from "@/types/categoryMain";
+import type { CategoryMainProps, CategoryItem } from "@/types";
 import CategoryMainCard from "./ui/CategoryMainCard";
 import FreshMeat from "../../public/images/category/fish-and-meats-category.png";
 import FreshVegetables from "../../public/images/category/vegetables-category.png";

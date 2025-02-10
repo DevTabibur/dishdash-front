@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FaCheckCircle } from "react-icons/fa";
-import type { SuccessMessageProps } from "@/types/auth";
+import type { SuccessMessageProps } from "@/types";
 
 const SuccessMessage = ({
   title,

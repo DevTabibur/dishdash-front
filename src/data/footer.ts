@@ -6,7 +6,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
-import type { FooterData } from "@/types/footer";
+import type { FooterData } from "@/types";
 const currentYear = new Date().getFullYear();
 
 export const footerData: FooterData = {

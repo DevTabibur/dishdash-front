@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Link from "next/link";
-import type { BrandCarouselProps } from "@/types/brands";
+import type { BrandCarouselProps } from "@/types";
 import { BrandLogo } from "./ui";
 
 const BrandCarousel = ({

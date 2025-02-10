@@ -1,47 +1,58 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import type { ProductDetails } from '@/types/product'
-import ImageGallery from './ImageGallery'
-import PriceDisplay from './PriceDisplay'
-import QuantitySelector from './QuantitySelector'
-import SocialShare from './SocialShare'
-
+import { useState } from "react";
+import type { ProductDetails } from "@/types";
+import ImageGallery from "./ImageGallery";
+import PriceDisplay from "./PriceDisplay";
+import QuantitySelector from "./QuantitySelector";
+import SocialShare from "./SocialShare";
 
 // This would normally come from an API
 const mockProduct: ProductDetails = {
-  id: '1',
-  name: 'Philips Rice Cooker 0.6L',
+  id: "1",
+  name: "Philips Rice Cooker 0.6L",
   images: [
-    { id: '1', url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zoy5EPzTbwiScOUPqu9aD4QnRD5qjU.png', alt: 'Philips Rice Cooker front view' },
-    { id: '2', url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zoy5EPzTbwiScOUPqu9aD4QnRD5qjU.png', alt: 'Philips Rice Cooker top view' },
-    { id: '3', url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zoy5EPzTbwiScOUPqu9aD4QnRD5qjU.png', alt: 'Philips Rice Cooker side view' },
+    {
+      id: "1",
+      url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zoy5EPzTbwiScOUPqu9aD4QnRD5qjU.png",
+      alt: "Philips Rice Cooker front view",
+    },
+    {
+      id: "2",
+      url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zoy5EPzTbwiScOUPqu9aD4QnRD5qjU.png",
+      alt: "Philips Rice Cooker top view",
+    },
+    {
+      id: "3",
+      url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zoy5EPzTbwiScOUPqu9aD4QnRD5qjU.png",
+      alt: "Philips Rice Cooker side view",
+    },
   ],
   rating: 0,
   reviews: 0,
   seller: {
-    id: '1',
-    name: 'Lavish Look',
-    rating: 4.5
+    id: "1",
+    name: "Lavish Look",
+    rating: 4.5,
   },
   originalPrice: 68950,
   discountPrice: 64750,
   clubPoints: 325,
   availability: 500,
-  description: 'High-quality rice cooker with 0.6L capacity',
-  isBrandOfficial: true
-}
+  description: "High-quality rice cooker with 0.6L capacity",
+  isBrandOfficial: true,
+};
 
 const ProductPage = () => {
-  const [quantity, setQuantity] = useState(1)
+  const [quantity, setQuantity] = useState(1);
 
   const handleAddToCart = () => {
-    console.log('Adding to cart:', { productId: mockProduct.id, quantity })
-  }
+    console.log("Adding to cart:", { productId: mockProduct.id, quantity });
+  };
 
   const handleBuyNow = () => {
-    console.log('Buying now:', { productId: mockProduct.id, quantity })
-  }
+    console.log("Buying now:", { productId: mockProduct.id, quantity });
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -60,8 +71,8 @@ const ProductPage = () => {
                   key={i}
                   className={`h-4 w-4 ${
                     i < mockProduct.rating
-                      ? 'fill-yellow-400 text-yellow-400'
-                      : 'fill-gray-200 text-gray-200'
+                      ? "fill-yellow-400 text-yellow-400"
+                      : "fill-gray-200 text-gray-200"
                   }`}
                 />
               ))}
@@ -76,7 +87,7 @@ const ProductPage = () => {
             <span className="text-gray-600">Soldby:</span>
             <span className="font-medium">{mockProduct.seller.name}</span>
             <button
-            //   variant="secondary"
+              //   variant="secondary"
               className="bg-pink-100 hover:bg-pink-200 text-gray-700"
             >
               Message Seller
@@ -175,7 +186,7 @@ const ProductPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductPage
+export default ProductPage;

@@ -1,4 +1,4 @@
-import type { Vendor, SortBy } from "@/types/vendorList";
+import type { Vendor, SortBy } from "@/types";
 
 export const sortVendors = (vendors: Vendor[], sortBy: SortBy): Vendor[] => {
   return [...vendors].sort((a, b) => {

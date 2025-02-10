@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import type { VendorSectionProps } from "@/types/vendor";
+import type { VendorSectionProps } from "@/types";
 import { VendorCard } from "./ui";
 
 export const VendorSection = ({ vendors }: VendorSectionProps) => {

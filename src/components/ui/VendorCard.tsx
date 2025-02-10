@@ -1,7 +1,7 @@
 // import Image from "next/image";
 // import Link from "next/link";
 
-// import type { VendorCardProps } from "@/types/vendor";
+// import type { VendorCardProps } from "@/types";
 // import { CircularLogo, VendorCurvedShape } from ".";
 
 // const VendorCard = ({ vendor }: VendorCardProps) => {
@@ -71,7 +71,7 @@ import {
   FaBox,
 } from "react-icons/fa";
 import { formatDate } from "@/utils/vendorUtils";
-import type { VendorCardProps } from "@/types/vendorList";
+import type { VendorCardProps } from "@/types";
 
 const VendorCard = ({ vendor }: VendorCardProps) => {
   return (
