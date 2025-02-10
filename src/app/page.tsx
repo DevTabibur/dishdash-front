@@ -1,11 +1,13 @@
-import { HeaderMiddle, HeaderTop } from "@/components/layout";
+import { Hero } from "@/components";
+import { HeaderMain, HeaderMiddle, HeaderTop } from "@/components/layout";
 
 export default function Home() {
   return (
     <main>
-      <HeaderTop />
+      {/* <HeaderTop />
       <HeaderMiddle location="New York" />
-
+      <HeaderMain />   */}
+      <Hero />
       {/*
       <HeaderMiddle location="New York" />
       <HeaderMain />

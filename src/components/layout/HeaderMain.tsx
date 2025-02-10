@@ -1,14 +1,11 @@
-'use client'
+"use client";
 
-import React, { useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import {
-  FaBars,
   FaPhoneAlt,
   FaSearch,
-  FaHeart,
-  FaShoppingCart,
   FaTimes,
   FaChevronRight,
   FaCarrot,
@@ -18,49 +15,50 @@ import {
   FaIceCream,
   FaCookie,
   FaStore,
-  FaRegHeart
-} from 'react-icons/fa'
-import { motion, AnimatePresence } from 'framer-motion'
-import type { HeaderMainProps, MenuItem } from '@/types/headerMain'
-import { FaBarsProgress } from 'react-icons/fa6'
-import { HiOutlineShoppingCart } from 'react-icons/hi'
+  FaRegHeart,
+  FaBars,
+} from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+import type { HeaderMainProps, MenuItem } from "@/types/headerMain";
+import { HiOutlineShoppingCart } from "react-icons/hi";
+import { TbCategoryFilled } from "react-icons/tb";
 
 const menuItems: MenuItem[] = [
-  { label: 'Home', href: '/' },
-  { label: 'Shop', href: '/shop', isNew: true },
-  { label: 'Pages', href: '/pages', isNew: true },
-  { label: 'Vendors', href: '/vendors' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Contact Us', href: '/contact' },
-]
+  { label: "Home", href: "/" },
+  { label: "Shop", href: "/shop", isNew: true },
+  { label: "Pages", href: "/pages", isNew: true },
+  { label: "Vendors", href: "/vendors" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact Us", href: "/contact" },
+];
 
 const categories = [
   {
-    label: 'Vegetables & Fruit',
+    label: "Vegetables & Fruit",
     icon: <FaCarrot />,
     subItems: [
-      'Potato & Tomato 000',
-      'Cucumber & Capsicum',
-      'Leafy Vegetables',
-      'Root Vegetables',
-      'Beans & Okra',
-      'Cabbage & Cauliflower',
-      'Gourd & Drumstick',
-      'Specialty'
-    ]
+      "Potato & Tomato 000",
+      "Cucumber & Capsicum",
+      "Leafy Vegetables",
+      "Root Vegetables",
+      "Beans & Okra",
+      "Cabbage & Cauliflower",
+      "Gourd & Drumstick",
+      "Specialty",
+    ],
   },
-  { label: 'Beverages', icon: <FaCoffee /> },
-  { label: 'Meats & Seafood', icon: <FaFish /> },
-  { label: 'Breakfast & Dairy', icon: <FaEgg /> },
-  { label: 'Frozen Foods', icon: <FaIceCream /> },
-  { label: 'Biscuits & Snacks', icon: <FaCookie /> },
-  { label: 'Grocery & Staples', icon: <FaStore /> },
-]
+  { label: "Beverages", icon: <FaCoffee /> },
+  { label: "Meats & Seafood", icon: <FaFish /> },
+  { label: "Breakfast & Dairy", icon: <FaEgg /> },
+  { label: "Frozen Foods", icon: <FaIceCream /> },
+  { label: "Biscuits & Snacks", icon: <FaCookie /> },
+  { label: "Grocery & Staples", icon: <FaStore /> },
+];
 
-const HeaderMain = ({ phone = '01- 234 567 890' }: HeaderMainProps) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isCategoryMenuOpen, setIsCategoryMenuOpen] = useState(false)
-  const [activeCategory, setActiveCategory] = useState<string | null>(null)
+const HeaderMain = ({ phone = "01- 234 567 890" }: HeaderMainProps) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isCategoryMenuOpen, setIsCategoryMenuOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
   return (
     <header className="bg-white border-b">
@@ -73,7 +71,7 @@ const HeaderMain = ({ phone = '01- 234 567 890' }: HeaderMainProps) => {
               onClick={() => setIsCategoryMenuOpen(!isCategoryMenuOpen)}
               className="flex items-center space-x-2 bg-[#27AE60] text-white px-4 py-2 rounded-md"
             >
-              <FaBars className="w-5 h-5" />
+              <TbCategoryFilled className="w-5 h-5" />
               <span>All Categories</span>
             </button>
 
@@ -92,28 +90,35 @@ const HeaderMain = ({ phone = '01- 234 567 890' }: HeaderMainProps) => {
                         onMouseEnter={() => setActiveCategory(category.label)}
                       >
                         <div className="flex items-center gap-3">
-                          <span className="text-[#27AE60]">{category.icon}</span>
+                          <span className="text-[#27AE60]">
+                            {category.icon}
+                          </span>
                           <span>{category.label}</span>
                         </div>
-                        {category.subItems && <FaChevronRight className="w-3 h-3" />}
+                        {category.subItems && (
+                          <FaChevronRight className="w-3 h-3" />
+                        )}
                       </button>
 
-                      {category.subItems && activeCategory === category.label && (
-                        <div className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-md">
-                          <div className="py-2">
-                            <h3 className="px-4 py-2 font-semibold">{category.label}</h3>
-                            {category.subItems.map((item, idx) => (
-                              <Link
-                                key={idx}
-                                href="#"
-                                className="block px-4 py-2 hover:bg-gray-50 text-gray-600"
-                              >
-                                {item}
-                              </Link>
-                            ))}
+                      {category.subItems &&
+                        activeCategory === category.label && (
+                          <div className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-md">
+                            <div className="py-2">
+                              <h3 className="px-4 py-2 font-semibold">
+                                {category.label}
+                              </h3>
+                              {category.subItems.map((item, idx) => (
+                                <Link
+                                  key={idx}
+                                  href="#"
+                                  className="block px-4 py-2 hover:bg-gray-50 text-gray-600"
+                                >
+                                  {item}
+                                </Link>
+                              ))}
+                            </div>
                           </div>
-                        </div>
-                      )}
+                        )}
                     </div>
                   ))}
                 </motion.div>
@@ -130,7 +135,6 @@ const HeaderMain = ({ phone = '01- 234 567 890' }: HeaderMainProps) => {
                 className="relative text-[#29a060] font-semibold hover:text-[#27ae5fc5] transition-colors"
               >
                 {item.label}
-
               </Link>
             ))}
           </nav>
@@ -138,17 +142,14 @@ const HeaderMain = ({ phone = '01- 234 567 890' }: HeaderMainProps) => {
           {/* Phone Number */}
           <div className="flex items-center text-gray-700 ">
             <FaPhoneAlt className="w-5 h-5 mr-2 text-[#27AE60]" />
-            <h2 className=''>{phone}</h2>
+            <h2 className="">{phone}</h2>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         <div className="lg:hidden flex items-center justify-between h-16">
-          <button
-            onClick={() => setIsCategoryMenuOpen(true)}
-            className="p-2"
-          >
-            <FaBarsProgress className="w-5 h-5 text-[#646464]" />
+          <button onClick={() => setIsCategoryMenuOpen(true)} className="p-2">
+            <FaBars className="w-5 h-5 text-[#646464]" />
           </button>
 
           <div className="flex items-center space-x-4">
@@ -156,23 +157,19 @@ const HeaderMain = ({ phone = '01- 234 567 890' }: HeaderMainProps) => {
               <FaSearch className="w-5 h-5 text-[#646464]" />
             </button>
             <button className="p-2 relative">
-              
               <FaRegHeart className="w-5 h-5 text-[#646464]" />
               <span className="absolute -top-1 -right-1 bg-[#27AE60] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
                 2
               </span>
             </button>
             <button className="p-2 relative">
-            <HiOutlineShoppingCart className="w-5 h-5 text-[#646464]" />
+              <HiOutlineShoppingCart className="w-5 h-5 text-[#646464]" />
               <span className="absolute -top-1 -right-1 bg-[#27AE60] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
                 3
               </span>
             </button>
-            <button
-              onClick={() => setIsMobileMenuOpen(true)}
-              className="p-2"
-            >
-              <FaBarsProgress className="w-5 h-5 text-[#646464]" />
+            <button onClick={() => setIsMobileMenuOpen(true)} className="p-2">
+              <FaBars className="w-5 h-5 text-[#646464]" />
             </button>
           </div>
         </div>
@@ -182,10 +179,10 @@ const HeaderMain = ({ phone = '01- 234 567 890' }: HeaderMainProps) => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ x: '100%' }}
+            initial={{ x: "100%" }}
             animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: 'tween' }}
+            exit={{ x: "100%" }}
+            transition={{ type: "tween" }}
             className="fixed inset-0 bg-white z-50 lg:hidden"
           >
             <div className="flex flex-col h-full">
@@ -213,7 +210,6 @@ const HeaderMain = ({ phone = '01- 234 567 890' }: HeaderMainProps) => {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     <span>{item.label}</span>
-
                   </Link>
                 ))}
               </div>
@@ -226,10 +222,10 @@ const HeaderMain = ({ phone = '01- 234 567 890' }: HeaderMainProps) => {
       <AnimatePresence>
         {isCategoryMenuOpen && (
           <motion.div
-            initial={{ x: '-100%' }}
+            initial={{ x: "-100%" }}
             animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-            transition={{ type: 'tween' }}
+            exit={{ x: "-100%" }}
+            transition={{ type: "tween" }}
             className="fixed inset-0 bg-white z-50 lg:hidden"
           >
             <div className="flex flex-col h-full">
@@ -252,9 +248,13 @@ const HeaderMain = ({ phone = '01- 234 567 890' }: HeaderMainProps) => {
                 {categories.map((category, index) => (
                   <div key={index}>
                     <button
-                      onClick={() => setActiveCategory(
-                        activeCategory === category.label ? null : category.label
-                      )}
+                      onClick={() =>
+                        setActiveCategory(
+                          activeCategory === category.label
+                            ? null
+                            : category.label,
+                        )
+                      }
                       className="flex items-center justify-between w-full px-4 py-3 border-b"
                     >
                       <div className="flex items-center gap-3">
@@ -262,14 +262,17 @@ const HeaderMain = ({ phone = '01- 234 567 890' }: HeaderMainProps) => {
                         <span>{category.label}</span>
                       </div>
                       {category.subItems && (
-                        <FaChevronRight className={`w-5 h-5 transition-transform ${activeCategory === category.label ? 'rotate-90' : ''
-                          }`} />
+                        <FaChevronRight
+                          className={`w-5 h-5 transition-transform ${
+                            activeCategory === category.label ? "rotate-90" : ""
+                          }`}
+                        />
                       )}
                     </button>
                     {category.subItems && activeCategory === category.label && (
                       <motion.div
                         initial={{ height: 0 }}
-                        animate={{ height: 'auto' }}
+                        animate={{ height: "auto" }}
                         exit={{ height: 0 }}
                         className="bg-gray-50"
                       >
@@ -293,8 +296,7 @@ const HeaderMain = ({ phone = '01- 234 567 890' }: HeaderMainProps) => {
         )}
       </AnimatePresence>
     </header>
-  )
-}
+  );
+};
 
-export default HeaderMain
-
+export default HeaderMain;
