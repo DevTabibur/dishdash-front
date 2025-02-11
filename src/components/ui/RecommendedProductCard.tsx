@@ -1,27 +1,28 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { FaStar, FaStore, FaShoppingCart } from "react-icons/fa";
 import type { RecommendedProductCardProps } from "@/types";
+import { motion } from "framer-motion";
 
 const RecommendedProductCard = ({
   product,
   onAddToCart,
 }: RecommendedProductCardProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
-    <div
-      className={`bg-white rounded-2xl p-4 transition-all duration-200 relative flex flex-col h-full border border-gray-200 ${isHovered ? "border-[#299e60]" : "border-gray-200"} group`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, y: 50 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="group bg-white rounded-2xl p-4 transition-all duration-200 relative flex flex-col h-full 
+                 border border-gray-200 hover:border-[#299e60]"
     >
       {/* Sale Badge */}
       {product.saleType && (
         <div
           className={`absolute top-4 left-4 px-3 py-1 rounded-full text-white text-sm font-medium z-10 
-          ${product.saleType === "Best Sale" ? "bg-blue-500" : "bg-red-500"}`}
+                      ${product.saleType === "Best Sale" ? "bg-blue-500" : "bg-red-500"}`}
         >
           {product.saleType}
         </div>
@@ -33,14 +34,13 @@ const RecommendedProductCard = ({
           src={product.image}
           alt={product.title}
           fill
-          className="object-contain group-hover:scale-105 transition-all duration-200"
+          className="object-contain transition-all duration-200 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
 
       {/* Product Details */}
       <div className="flex-1 flex flex-col">
-        {/* Title */}
         <h3 className="text-[#1A237E] font-medium text-lg mb-2 line-clamp-2">
           {product.title}
         </h3>
@@ -77,14 +77,15 @@ const RecommendedProductCard = ({
         {/* Add to Cart Button */}
         <button
           onClick={() => onAddToCart(product.id)}
-          className={`mt-auto w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full text-[#27AE60] font-medium transition-all duration-200
-            ${isHovered ? "bg-[#27AE60] text-white" : "bg-[#E8F5E9]"}`}
+          className="mt-auto w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full 
+                     text-[#27AE60] font-medium transition-all duration-200 
+                     bg-[#E8F5E9] hover:bg-[#27AE60] hover:text-white"
         >
           Add To Cart
           <FaShoppingCart className="w-4 h-4" />
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

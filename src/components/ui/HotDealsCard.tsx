@@ -52,9 +52,9 @@ const HotDealsCard = ({ deal }: HotDealsCardProps) => {
         }}
       />
 
-      <div className="relative p-8 flex flex-col h-full">
+      <div className="relative p-8 flex flex-col">
         {/* Image */}
-        <div className="relative h-64 mb-6">
+        <div className="relative h-32 mb-6">
           <Image
             src={deal.image || "/placeholder.svg"}
             alt={deal.title}
@@ -70,7 +70,7 @@ const HotDealsCard = ({ deal }: HotDealsCardProps) => {
           <h3 className="text-white text-4xl font-bold mb-8">{deal.title}</h3>
 
           {/* Countdown Timer */}
-          <div className="flex justify-center gap-4 mb-8">
+          <div className="flex justify-center gap-4 mb-2">
             {Object.entries(timeLeft).map(([key, value]) => (
               <div key={key} className="bg-white rounded-lg px-4 py-2">
                 <div className="text-xl font-bold text-[#1A237E]">

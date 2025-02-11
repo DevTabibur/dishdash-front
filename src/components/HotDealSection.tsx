@@ -6,6 +6,7 @@ import Link from "next/link";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import type { HotDealsSectionProps } from "@/types";
 import { HotDealsCard, RecommendedProductCard } from "./ui";
+import toast from "react-hot-toast";
 
 const HotDealsSection = ({ featuredDeal, products }: HotDealsSectionProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -56,6 +57,10 @@ const HotDealsSection = ({ featuredDeal, products }: HotDealsSectionProps) => {
           <div className="flex items-center gap-4">
             <Link
               href="/deals"
+              onClick={(e) => {
+                e.preventDefault(); // Prevents navigation
+                toast.success("Coming Soon!");
+              }}
               className="text-gray-600 hover:text-[#27AE60] transition-colors"
             >
               View All Deals
@@ -84,7 +89,7 @@ const HotDealsSection = ({ featuredDeal, products }: HotDealsSectionProps) => {
         </div>
 
         {/* Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 ">
           {/* Featured Deal */}
           <div className="lg:col-span-4">
             <HotDealsCard deal={featuredDeal} />
@@ -95,18 +100,19 @@ const HotDealsSection = ({ featuredDeal, products }: HotDealsSectionProps) => {
             <motion.div
               animate={{ x: `-${currentIndex * 33.33}%` }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="flex gap-6"
-              style={{ width: `${(products.length / 3) * 100}%` }}
+              className="flex gap-6 "
+              // style={{ width: `${(products.length / 3) * 100}%` }}
             >
               {products.map((product) => (
                 <div
                   key={product.id}
-                  //   className="w-full md:w-1/2 lg:w-1/3"
-                  //   style={{ flex: '0 0 33.33%' }}
+                  className="md:w-1/2 lg:w-1/3 -mt-[43px]"
+                  style={{ flex: "0 0 33.33%" }}
                 >
                   <RecommendedProductCard
                     product={product}
                     onAddToCart={handleAddToCart}
+                    key={product.id}
                   />
                 </div>
               ))}

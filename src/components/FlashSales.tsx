@@ -1,6 +1,5 @@
 "use client";
-
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { FlashSaleCard } from "./ui";
@@ -20,7 +19,7 @@ const defaultItems: FlashSaleItem[] = [
     backgroundImage: FlashSaleBg1.src,
     backgroundColor: "#FFF5F5",
     href: "/flash-sale/vegetables",
-    endDate: "2024-02-01T00:00:00",
+    endDate: "2024-02-10T00:00:00",
   },
   {
     id: 2,
@@ -29,7 +28,7 @@ const defaultItems: FlashSaleItem[] = [
     backgroundColor: "#F1F8E9",
     backgroundImage: FlashSaleBg2.src,
     href: "/flash-sale/snacks",
-    endDate: "2024-02-01T00:00:00",
+    endDate: "2024-02-10T00:00:00",
   },
   {
     id: 3,
@@ -38,9 +37,48 @@ const defaultItems: FlashSaleItem[] = [
     backgroundColor: "#E3F2FD",
     backgroundImage: FlashSaleBg1.src,
     href: "/flash-sale/fruits",
-    endDate: "2024-02-01T00:00:00",
+    endDate: "2024-02-10T00:00:00",
   },
 ];
+
+const calculateTimeLeft = (endDate: string) => {
+  const difference = new Date(endDate).getTime() - new Date().getTime();
+
+  if (difference <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+
+  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((difference / (1000 * 60)) % 60);
+  const seconds = Math.floor((difference / 1000) % 60);
+
+  return { days, hours, minutes, seconds };
+};
+
+const FlashSaleTimer = ({ endDate }: { endDate: string }) => {
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(endDate));
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeLeft(calculateTimeLeft(endDate));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [endDate]);
+
+  return (
+    <div className="mt-4 text-center">
+      <p className="text-sm text-gray-600">Time Left:</p>
+      <div className="flex justify-center gap-2">
+        {timeLeft.days > 0 && (
+          <span className="text-lg font-bold">{timeLeft.days}d</span>
+        )}
+        <span className="text-lg font-bold">{timeLeft.hours}h</span>
+        <span className="text-lg font-bold">{timeLeft.minutes}m</span>
+        <span className="text-lg font-bold">{timeLeft.seconds}s</span>
+      </div>
+    </div>
+  );
+};
 
 const FlashSales = ({ items = defaultItems }: FlashSalesProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,27 +86,21 @@ const FlashSales = ({ items = defaultItems }: FlashSalesProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
 
+  // Infinite sliding logic
   const nextSlide = () => {
-    if (currentIndex < items.length - 2) {
-      setCurrentIndex((prev) => prev + 1);
-    } else {
-      setCurrentIndex(0); // Reset to start when reaching end
-    }
+    setCurrentIndex((prev) => (prev + 1) % items.length);
   };
 
   const prevSlide = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prev) => prev - 1);
-    } else {
-      setCurrentIndex(items.length - 2); // Go to end when at start
-    }
+    setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
   };
 
+  // Auto-slide functionality
   useEffect(() => {
     if (isAutoPlaying) {
       autoPlayRef.current = setInterval(() => {
         nextSlide();
-      }, 3000); // Change slide every 3 seconds
+      }, 3000);
     }
 
     return () => {
@@ -78,6 +110,7 @@ const FlashSales = ({ items = defaultItems }: FlashSalesProps) => {
     };
   }, [currentIndex, isAutoPlaying]);
 
+  // Pause auto-slide on hover
   const handleMouseEnter = () => {
     setIsAutoPlaying(false);
   };
@@ -104,15 +137,13 @@ const FlashSales = ({ items = defaultItems }: FlashSalesProps) => {
             <div className="flex gap-2">
               <button
                 onClick={prevSlide}
-                disabled={currentIndex === 0}
-                className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors"
+                className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors"
               >
                 <FaChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={nextSlide}
-                disabled={currentIndex >= items.length - 2}
-                className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors"
+                className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors"
               >
                 <FaChevronRight className="w-4 h-4" />
               </button>
@@ -130,8 +161,8 @@ const FlashSales = ({ items = defaultItems }: FlashSalesProps) => {
             animate={{ x: `-${currentIndex * 50}%` }}
             transition={{
               type: "spring",
-              stiffness: 100, // Reduced for smoother animation
-              damping: 20, // Reduced for smoother animation
+              stiffness: 100,
+              damping: 20,
               duration: 0.8,
             }}
             className="flex gap-6"
@@ -144,6 +175,7 @@ const FlashSales = ({ items = defaultItems }: FlashSalesProps) => {
                 style={{ flex: "0 0 50%" }}
               >
                 <FlashSaleCard item={item} />
+                <FlashSaleTimer endDate={item.endDate} />
               </div>
             ))}
           </motion.div>
